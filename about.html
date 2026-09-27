@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+
+<html class="" dir="ltr" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>StratoOps - Cloud Migration &amp; DevOps Consulting</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-error-container":"#ffdad6","on-secondary-fixed":"#001e2c","surface-container":"#1c2028","background":"#0f131c","inverse-surface":"#dfe2ee","surface-container-highest":"#31353e","on-secondary-fixed-variant":"#004c69","on-tertiary-container":"#006d4a","primary-fixed-dim":"#00dbe9","surface-container-high":"#262a33","surface-variant":"#31353e","on-tertiary-fixed":"#002113","surface-bright":"#353942","primary":"#dbfcff","primary-container":"#00f0ff","primary-fixed":"#7df4ff","outline":"#849495","secondary-fixed-dim":"#7bd0ff","surface-tint":"#00dbe9","tertiary":"#d8ffe7","inverse-primary":"#006970","secondary-container":"#00a6e0","on-tertiary":"#003824","on-primary-container":"#006970","surface-dim":"#0f131c","on-background":"#dfe2ee","on-secondary-container":"#00374d","on-tertiary-fixed-variant":"#005236","on-primary-fixed-variant":"#004f54","secondary":"#7bd0ff","on-error":"#690005","surface":"#0f131c","inverse-on-surface":"#2c3039","outline-variant":"#3b494b","tertiary-container":"#65f2b5","tertiary-fixed":"#6ffbbe","on-primary-fixed":"#002022","surface-container-low":"#181c24","error":"#ffb4ab","secondary-fixed":"#c4e7ff","tertiary-fixed-dim":"#4edea3","surface-container-lowest":"#0a0e16","on-primary":"#00363a","on-surface":"#dfe2ee","error-container":"#93000a","on-surface-variant":"#b9cacb","on-secondary":"#00354a"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter-mobile":"1rem","margin-mobile":"1rem","space-xs":"0.25rem","margin-tablet":"2rem","gutter":"1.5rem","space-sm":"0.5rem","margin":"4rem","space-md":"1rem","space-lg":"1.5rem","space-xl":"2.5rem"},"fontFamily":{"headline-lg":["Inter"],"body-md":["Inter"],"label-lg":["JetBrains Mono"],"code-block":["JetBrains Mono"],"label-md":["JetBrains Mono"],"label-sm":["JetBrains Mono"],"headline-lg-mobile":["Inter"],"headline-md":["Inter"],"body-lg":["Inter"],"body-sm":["Inter"],"headline-sm":["Inter"],"headline-xl-mobile":["Inter"],"headline-xl":["Inter"]},"fontSize":{"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.02em","fontWeight":"600"}],"code-block":["13px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"500"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"500"}],"headline-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"700"}],"headline-md":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"-0.005em","fontWeight":"400"}],"body-sm":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-xl-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.025em","fontWeight":"800"}],"headline-xl":["56px",{"lineHeight":"64px","letterSpacing":"-0.03em","fontWeight":"800"}]}}}};</script><link href="css/site.css" rel="stylesheet"/><script defer="True" src="js/app.js"></script></head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased min-h-screen"><header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-20 w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><a class="flex items-center gap-space-sm group" data-path="home-1-enterprise-migration" href="#"><img alt="StratoOps Cloud &amp; DevOps Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Vi7rqxSz8ptX-zcyMsz1MAinyhkdaVLrAcS-kr3oJUzJKxvDawb1PhDZ7pKG7mENuOuDZTQTHLazJSQktZHJdMi5-TSTW9p8gzDnv_iXnTlJK8zovsBBuL-kRFmuoc_9vvwTjBkVsyq2TSrK343xATPgQqZeJ6kcraxZ9euAjQHW2ruFFHJmz7vxz2dKWyBuYtB9_pcJuxNbMvgX7G2CpTsfnXEtsyBT0zxKUYHmYQYjSh6msVdb9h3IIY"/><span class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight uppercase">Strato<span class="text-secondary">Ops</span></span></a></div><nav class="hidden xl:flex items-center gap-space-lg" data-active-classes="text-primary font-semibold"><div class="relative group py-space-sm"><button class="flex items-center gap-space-xs font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer uppercase" type="button">Home<span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:text-primary transition-transform duration-200 group-hover:rotate-180">expand_more</span></button><div class="absolute top-full start-0 hidden group-hover:flex flex-col w-64 p-space-xs bg-surface-container-high rounded-lg shadow-[0_8px_32px_-8px_rgba(0,0,0,0.6)] z-50"><a class="px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="home-1-enterprise-migration" href="#">Home 1: Enterprise Migration</a><a class="px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="home-2-cloud-native-sre" href="#">Home 2: Cloud Native &amp; SRE</a></div></div><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors uppercase" data-path="services" href="#">Services</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors uppercase" data-path="case-studies" href="#">Case Studies</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors uppercase" data-path="technologies" href="#">Technologies</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors uppercase" data-path="about-leadership" href="#">About / Leadership</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors uppercase" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-sm shrink-0"><button class="flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm uppercase transition-colors cursor-pointer" id="rtl-toggle-btn" title="Toggle RTL/LTR layout" type="button"><span class="text-[14px]">🌐</span><span class="" data-rtl-label="true">RTL</span></button><button class="p-space-xs rounded bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors cursor-pointer flex items-center justify-center" id="theme-toggle-btn" title="Toggle Dark/Light Mode" type="button"><span class="material-symbols-outlined text-[20px] text-primary-fixed">dark_mode</span></button><a class="hidden sm:inline-flex items-center justify-center px-space-md py-space-sm bg-primary-container text-on-primary-container font-label-lg text-label-lg uppercase rounded shadow-[0_0_16px_rgba(0,240,255,0.2)] hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all" data-path="contact" href="#">Schedule Audit</a></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full">
+<!-- HERO SECTION -->
+<section class="relative w-full overflow-hidden bg-surface-container-lowest -mt-20 pt-20">
+<div class="relative w-full min-h-[620px] lg:min-h-[720px] flex items-center">
+<div class="absolute inset-0 z-0">
+<img alt="StratoOps Executive Engineering Lounge with Holographic Architecture Mesh" class="w-full h-full object-cover object-center filter brightness-[0.45] contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQK_c_UDPwTWB3_CXvsm-hc64dicHrOKtWcA4MY4Dgwsbb6tV0drC0reKY1R5ApsPDlmNJGhrmyLRwb3LkDC_8LK4jB1yQJUEWYGAYWiTtadny3b8COmNj85abTA36TnVnDeAnI6XzxA0jalxeq3u3_17SBGxPfZESnX4HJrxOAGrzR_-wwH2RWDYfGiCdteqYeb235Cln9k-jYyu0002KAEZztKKXlvWbO0FIo-3kXnhSZ4VbyWsDkw"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container-lowest via-surface-container-lowest/80 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-surface-container-lowest/40"></div>
+</div>
+<div class="relative z-10 w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin py-space-xl">
+<div class="max-w-3xl flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container-high/90 text-primary-fixed font-label-sm text-label-sm uppercase tracking-wider backdrop-blur-md self-start shadow-sm">
+<span class="inline-block w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+            Zero-Sales-Layer Engineering Advisory
+          </div>
+<h1 class="font-headline-xl text-headline-xl text-primary font-extrabold tracking-tight leading-none">
+            Engineered by <span class="text-primary-container">Practitioners</span>, Not Generalist Consultants.
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+            StratoOps was founded by ex-hyperscaler principal architects, Linux kernel contributors, and SRE leaders dedicated to zero-downtime mission-critical transformations. We do not field junior squads behind senior sales facades.
+          </p>
+<div class="flex flex-wrap items-center gap-space-md pt-space-sm">
+<a class="inline-flex items-center justify-center gap-space-xs px-space-lg py-space-md bg-primary-container text-on-primary-container font-label-lg text-label-lg uppercase rounded shadow-lg hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all cursor-pointer" href="#principal-fellows">
+              Explore Principal Fellows
+              <span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+</a>
+<a class="inline-flex items-center justify-center gap-space-xs px-space-lg py-space-md bg-surface-container-high/80 text-on-surface hover:text-primary font-label-lg text-label-lg uppercase rounded transition-all backdrop-blur-sm cursor-pointer hover:bg-surface-container-highest" href="#open-source">
+<span class="material-symbols-outlined text-[18px] text-primary">terminal</span>
+              Read Open-Source Contributions
+            </a>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-md pt-space-lg mt-space-md bg-surface-container/70 p-space-md rounded backdrop-blur-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Global Fellows</span>
+<span class="font-headline-md text-headline-md text-primary font-bold">48</span>
+<span class="font-code-block text-code-block text-secondary-fixed-dim">100% Ex-Principal Tier</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Kernels &amp; OSS PRs</span>
+<span class="font-headline-md text-headline-md text-primary font-bold">12.4k+</span>
+<span class="font-code-block text-code-block text-tertiary-fixed">Linux, K8s, eBPF</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Production Outages</span>
+<span class="font-headline-md text-headline-md text-primary font-bold">0</span>
+<span class="font-code-block text-code-block text-tertiary-fixed">Guaranteed SLAs</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Live Mesh Hubs</span>
+<span class="font-headline-md text-headline-md text-primary font-bold">4</span>
+<span class="font-code-block text-code-block text-secondary-fixed-dim">SFO • LDN • FRA • SIN</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 1: THE STRATOOPS ENGINEERING MANIFESTO -->
+<section class="w-full bg-surface py-space-xl">
+<div class="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-xl">
+<div class="max-w-2xl flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-primary font-label-md text-label-md uppercase tracking-wider">
+<span class="font-mono text-tertiary-fixed">01 //</span>
+            Operating Philosophy
+          </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">
+            The StratoOps Engineering Manifesto
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Traditional consulting firms sell headcounts and billing hours. StratoOps ships immutable infrastructure, declarative primitives, and transfers absolute autonomous operational capability to your in-house teams.
+          </p>
+</div>
+<div class="shrink-0 bg-surface-container-low px-space-md py-space-sm rounded">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant block">Governance Rule</span>
+<span class="font-label-lg text-label-lg text-secondary font-mono">STRICT_ZERO_LOCKIN = TRUE</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<div class="bg-surface-container-low p-space-lg rounded flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div class="flex flex-col gap-space-md">
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary-container transition-all">
+<span class="material-symbols-outlined text-[24px]">key</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary-fixed-dim uppercase tracking-wider">Tenet I</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">100% Client Code Ownership</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Every Terraform module, Helm chart, CI/CD pipeline, and observability harness lives within your internal repositories from day zero. No black-box platforms or proprietary wrappers.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm bg-surface-container-lowest/50 p-space-xs rounded font-code-block text-code-block text-tertiary-fixed">
+            LICENSE: Apache-2.0 / MIT in Client Org
+          </div>
+</div>
+<div class="bg-surface-container-low p-space-lg rounded flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div class="flex flex-col gap-space-md">
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary-container transition-all">
+<span class="material-symbols-outlined text-[24px]">terminal</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary-fixed-dim uppercase tracking-wider">Tenet II</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Hardened Code Over Slides</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              We deliver passing automated test suites, GitOps deployment manifests, and eBPF kernel profiling harnesses. We do not bill for 100-slide theoretical roadmap decks.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm bg-surface-container-lowest/50 p-space-xs rounded font-code-block text-code-block text-tertiary-fixed">
+            EXECUTION: CI/CD Test Pipeline Passed
+          </div>
+</div>
+<div class="bg-surface-container-low p-space-lg rounded flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div class="flex flex-col gap-space-md">
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary-container transition-all">
+<span class="material-symbols-outlined text-[24px]">calculate</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary-fixed-dim uppercase tracking-wider">Tenet III</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Verifiable Mathematical SLAs</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Downtime during enterprise migrations is mathematically unacceptable. Our zero-downtime blue/green dual-run topologies come with binding contractual recovery time objectives (RTO=0, RPO=0).
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm bg-surface-container-lowest/50 p-space-xs rounded font-code-block text-code-block text-tertiary-fixed">
+            METRIC: SLA = 99.999% | Failover &lt; 8ms
+          </div>
+</div>
+<div class="bg-surface-container-low p-space-lg rounded flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div class="flex flex-col gap-space-md">
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary-container transition-all">
+<span class="material-symbols-outlined text-[24px]">school</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary-fixed-dim uppercase tracking-wider">Tenet IV</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Continuous Knowledge Transfer</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Our principal fellows pair-program with client staff engineers. Every architectural decision is recorded as an immutable ADR (Architecture Decision Record) embedded alongside source trees.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm bg-surface-container-lowest/50 p-space-xs rounded font-code-block text-code-block text-tertiary-fixed">
+            HANDOVER: In-house SRE Full Autonomy
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: GLOBAL LEADERSHIP & PRINCIPAL ADVISORY FELLOWS -->
+<section class="w-full bg-surface-container-lowest py-space-xl" id="principal-fellows">
+<div class="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md mb-space-lg">
+<div class="max-w-2xl flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-primary font-label-md text-label-md uppercase tracking-wider">
+<span class="font-mono text-tertiary-fixed">02 //</span>
+            Principal Bench
+          </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">
+            Global Leadership &amp; Principal Advisory Fellows
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Meet the architects directing your mission-critical initiatives. Direct access, zero account-manager layers.
+          </p>
+</div>
+<!-- Filter tabs -->
+<div class="flex flex-wrap items-center gap-space-xs bg-surface-container-low p-space-xs rounded" id="fellow-filter-bar">
+<button class="px-space-md py-space-xs rounded font-label-sm text-label-sm uppercase bg-primary-container text-on-primary-container cursor-pointer transition-colors filter-btn" data-filter="all" type="button">All Disciplines</button>
+<button class="px-space-md py-space-xs rounded font-label-sm text-label-sm uppercase bg-transparent text-on-surface-variant hover:text-on-surface cursor-pointer transition-colors filter-btn" data-filter="distributed" type="button">Distributed Systems</button>
+<button class="px-space-md py-space-xs rounded font-label-sm text-label-sm uppercase bg-transparent text-on-surface-variant hover:text-on-surface cursor-pointer transition-colors filter-btn" data-filter="cloud-native" type="button">Cloud-Native / K8s</button>
+<button class="px-space-md py-space-xs rounded font-label-sm text-label-sm uppercase bg-transparent text-on-surface-variant hover:text-on-surface cursor-pointer transition-colors filter-btn" data-filter="sre" type="button">SRE &amp; FinOps</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg" id="fellow-grid">
+<!-- Fellow 1 -->
+<div class="fellow-card bg-surface-container-low rounded overflow-hidden flex flex-col transition-all hover:bg-surface-container" data-category="distributed">
+<div class="h-64 w-full relative overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover object-top" data-alt="Portrait of Dr. Ronald Sterling, Chief Technology Architect at StratoOps, a distinguished African American cloud systems scientist in tech executive blazer in dark modern command center background, electric cyan edge glow and sharp technical lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgfDg1KVOuZ8u3PW6-J3EXtjs7qSWzOqY7wTIWZrIgYLo19bSYcqIqs8oeldx544LM3nukmkUBJkCotb-XaQFJLVSB-TTA_9kAi3JyiChA3XKHcYJBF40-LyQHlJHT0nvOfkENGQRL5wgtMvNEGEGB_byQ7JKE20r1uIshepjXLMNYJfDwhyQBN79IVfFhDnL7265MCnfIoyPVdoAhja8l2b-vIDtFJ2TVnvCysB9oMOLU3hDtkeks1w"/>
+<div class="absolute top-space-sm end-space-sm bg-surface-container-highest/90 px-space-xs py-space-xs rounded font-label-sm text-label-sm text-tertiary-fixed backdrop-blur-sm">
+              Ex-AWS Principal
+            </div>
+</div>
+<div class="p-space-lg flex flex-col justify-between flex-1 gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-mono">Distributed Systems • SF Hub</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Dr. Ronald Sterling</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+                Former AWS EC2 Core Foundations Principal Engineer. Led multi-region active-active synchronization across 18 AZs handling 45M IOPS. Author of high-throughput consensus papers.
+              </p>
+</div>
+<div class="flex flex-col gap-space-sm pt-space-sm bg-surface-container-lowest/40 p-space-sm rounded">
+<span class="font-code-block text-code-block text-primary-fixed">Specialty: Raft &amp; Paxos Multi-Region Mesh</span>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<a class="hover:text-primary transition-colors flex items-center gap-space-xs" href="#">
+<span class="material-symbols-outlined text-[16px]">code</span> gh/ronald-sterling
+                </a>
+<span class="text-tertiary-fixed">14 Patents</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Fellow 2 -->
+<div class="fellow-card bg-surface-container-low rounded overflow-hidden flex flex-col transition-all hover:bg-surface-container" data-category="cloud-native">
+<div class="h-64 w-full relative overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover object-top" data-alt="Portrait of Elena Rostova, Principal Fellow of Container Architecture, East European female software engineer with wireframe glasses looking confidently forward in an ambient dark blue server room setting, cyan bokeh highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnDkQKOjW-MJV1Gdt9MuiN4TMzTchAnuet96uxkc4B6E-ftUhAsCdaNdwlRjV_ah5Oft0j4jQrP0s2Q8x46Q1jmGixdCn1aPw9WKIESeaWlwTzEHUhjDuKcdLB0lVDgbSmG5R-9P0njaCHlGgFGfEekVD1F7ULUeYaAozUL08Lkcq2O4JhBNjew-YHvDcZt0hbWPCSS28QQ3bK_RDsV3P3HwWDhESNtjw15xiYA4jFPoJYv9Lee60MpQ"/>
+<div class="absolute top-space-sm end-space-sm bg-surface-container-highest/90 px-space-xs py-space-xs rounded font-label-sm text-label-sm text-primary-fixed backdrop-blur-sm">
+              K8s SIG Lead
+            </div>
+</div>
+<div class="p-space-lg flex flex-col justify-between flex-1 gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-mono">Cloud-Native • London Hub</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Elena Rostova</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+                Kubernetes SIG Node and Scheduling Maintainer. Architect of ultra-dense tier-1 banking clusters running 120,000+ pods with sub-millisecond network jitter using Cilium and eBPF.
+              </p>
+</div>
+<div class="flex flex-col gap-space-sm pt-space-sm bg-surface-container-lowest/40 p-space-sm rounded">
+<span class="font-code-block text-code-block text-primary-fixed">Specialty: eBPF CNI &amp; Micro-VM Isolation</span>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<a class="hover:text-primary transition-colors flex items-center gap-space-xs" href="#">
+<span class="material-symbols-outlined text-[16px]">code</span> gh/elena-rostova
+                </a>
+<span class="text-secondary-fixed">KubeCon Keynote</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Fellow 3 -->
+<div class="fellow-card bg-surface-container-low rounded overflow-hidden flex flex-col transition-all hover:bg-surface-container" data-category="sre">
+<div class="h-64 w-full relative overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover object-top" data-alt="Portrait of Tariq Al-Mansoor, Global Head of SRE and Resilience Engineering, Middle Eastern engineer in dark tailored minimalist jacket, confident expression in front of Frankfurt glass data hub with high precision diagnostic screens" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxx_ZNfOV7IK-COjBCGhlRixEfd4ScGXgGIwQoKVfbqpkorYvtt_l1P0nQ4CQe5b5pMlt5n0XihR_ahM3X3QI0-8WjXiCvE8BqPEyTvdC-WW9WVzZMES565XmSS_uFASbk3OPyLbCmukzKdd11KbW_h1x6W0FXQuKYjEYiiopF8wCxvS4IOcXXa6xpHXJsFB2qSUUmT5iRNIVMWNipYX6pBVkKvOjzXv54P6gi1mRGelq4vT9VExDVtg"/>
+<div class="absolute top-space-sm end-space-sm bg-surface-container-highest/90 px-space-xs py-space-xs rounded font-label-sm text-label-sm text-tertiary-fixed backdrop-blur-sm">
+              Ex-Google SRE Dir
+            </div>
+</div>
+<div class="p-space-lg flex flex-col justify-between flex-1 gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-mono">Resilience • Frankfurt Hub</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Tariq Al-Mansoor</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+                Former Director of SRE for Google Compute Engine Europe. Specialist in chaos engineering injection, disaster blast-radius containment, and sovereign GDPR cloud residency frameworks.
+              </p>
+</div>
+<div class="flex flex-col gap-space-sm pt-space-sm bg-surface-container-lowest/40 p-space-sm rounded">
+<span class="font-code-block text-code-block text-primary-fixed">Specialty: Chaos Mesh &amp; Sovereign Zero-Trust</span>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<a class="hover:text-primary transition-colors flex items-center gap-space-xs" href="#">
+<span class="material-symbols-outlined text-[16px]">code</span> gh/tariq-sre
+                </a>
+<span class="text-tertiary-fixed">99.999% Master</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Fellow 4 -->
+<div class="fellow-card bg-surface-container-low rounded overflow-hidden flex flex-col transition-all hover:bg-surface-container" data-category="sre">
+<div class="h-64 w-full relative overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover object-top" data-alt="Portrait of Mei-Ling Tan, Fellow of Enterprise FinOps and Cloud Economics, Asian woman tech executive with sleek modern styling in glass office overlooking Singapore skyline at night with ambient glowing cyan monitors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRm-TzVgBs14o8mu-6IVPkbm1gorrE6VssakOAXyv4VfoNh9G0INsVF-JHwJqFz7jVeRZL23g8rKLB1C2wOUZHqYT2V5egzryHe2v0GmUlyYVgkdLR8aCmLXfHq20u2BX_q_FE0E9yUYdkdj4vdaSxf85pZgbm5ov9J8n2oCt6Lpt1s-W976nyigc-gp6FqkeiMYGBJDUMmES2spHff9lQtb2ZRKOvacTXFIRMd_x4HYUm82zoh22JkQ"/>
+<div class="absolute top-space-sm end-space-sm bg-surface-container-highest/90 px-space-xs py-space-xs rounded font-label-sm text-label-sm text-secondary-fixed backdrop-blur-sm">
+              FinOps Fellow
+            </div>
+</div>
+<div class="p-space-lg flex flex-col justify-between flex-1 gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-mono">FinOps • Singapore Hub</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Mei-Ling Tan</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+                Governing Board Member of the FinOps Foundation. Engineered automated unit-economics arbitrage for Fortune 50 enterprises, reclaiming $140M+ in cloud compute waste while increasing throughput.
+              </p>
+</div>
+<div class="flex flex-col gap-space-sm pt-space-sm bg-surface-container-lowest/40 p-space-sm rounded">
+<span class="font-code-block text-code-block text-primary-fixed">Specialty: Spot Fleets &amp; Automated Rightsizing</span>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<a class="hover:text-primary transition-colors flex items-center gap-space-xs" href="#">
+<span class="material-symbols-outlined text-[16px]">code</span> gh/meiling-finops
+                </a>
+<span class="text-tertiary-fixed">$140M Saved</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: OPEN-SOURCE STEWARDSHIP & COMMUNITY CONTRIBUTIONS -->
+<section class="w-full bg-surface py-space-xl" id="open-source">
+<div class="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-xl">
+<div class="max-w-2xl flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-primary font-label-md text-label-md uppercase tracking-wider">
+<span class="font-mono text-tertiary-fixed">03 //</span>
+            Ecosystem Impact
+          </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">
+            Open-Source Stewardship
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            We build the foundational tools that define modern cloud native operations. Free, verifiable, and powering thousands of global production clusters.
+          </p>
+</div>
+<a class="inline-flex items-center gap-space-xs text-primary font-label-lg text-label-lg uppercase hover:underline" href="https://github.com" rel="noopener noreferrer" target="_blank">
+          View StratoOps GitHub Organization
+          <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</a>
+</div>
+<!-- Bento Mosaic for Tools -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Main Highlight Card -->
+<div class="md:col-span-2 bg-surface-container-low p-space-lg rounded flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary-container text-[28px]">speed</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold font-mono">strato-ebpf-mesh</span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs rounded">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">star</span>
+<span class="font-code-block text-code-block text-on-surface font-bold">14.8k stars</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              High-performance Linux kernel eBPF runtime engine for real-time L7 traffic inspection, packet drops, zero-overhead tracing, and automatic mTLS encryption for Kubernetes multi-cloud mesh nodes.
+            </p>
+<!-- Mini Console Visualizer -->
+<div class="w-full bg-surface-container-lowest p-space-md rounded font-code-block text-code-block">
+<div class="flex items-center justify-between text-on-surface-variant text-[11px] pb-space-xs border-b border-surface-container-high/40 mb-space-xs">
+<span>ebpf_probe_session.c</span>
+<span class="text-tertiary-fixed">STATUS: HOOKED (kernel 6.8.0)</span>
+</div>
+<p class="text-secondary">$ strato-mesh hook --interface eth0 --proto http2 --drop-latency-ms &gt; 12</p>
+<p class="text-primary-fixed">[INFO] Injected 4 XDP programs into ingress queues [0..3]</p>
+<p class="text-tertiary-fixed">[OK] Real-time latency budget locked: 0.18ms p99 at 480,000 req/sec</p>
+</div>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-md pt-space-md mt-space-md bg-surface-container/30 p-space-sm rounded">
+<div class="flex items-center gap-space-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Monthly Pulls: <strong class="text-on-surface">3.2M</strong></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Contributors: <strong class="text-on-surface">194</strong></span>
+</div>
+<span class="font-code-block text-code-block text-secondary-fixed">C / Rust / eBPF Primitives</span>
+</div>
+</div>
+<!-- Tool Card 2 -->
+<div class="bg-surface-container-low p-space-lg rounded flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold font-mono">tf-guard-mesh</span>
+<div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs rounded">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">star</span>
+<span class="font-code-block text-code-block text-on-surface font-bold">8.4k</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Automated Terraform policy-as-code static analyzer catching enterprise drift, AWS/Azure IAM privilege escalation, and zero-day CIDR exposure prior to git commit.
+            </p>
+<div class="p-space-sm rounded bg-surface-container-lowest font-code-block text-code-block text-secondary-fixed">
+              tf-guard check --fail-on-drift --strict-iam
+            </div>
+</div>
+<div class="pt-space-md mt-space-sm flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-primary">CNCF Sandbox Listed</span>
+<span>Go 1.22</span>
+</div>
+</div>
+<!-- Tool Card 3 -->
+<div class="bg-surface-container-low p-space-lg rounded flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold font-mono">argo-sync-governor</span>
+<div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs rounded">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">star</span>
+<span class="font-code-block text-code-block text-on-surface font-bold">6.1k</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Dynamic canary governor plugin for ArgoCD executing automated rollback whenever telemetry SLI anomaly score breaches threshold during GitOps rollouts.
+            </p>
+<div class="p-space-sm rounded bg-surface-container-lowest font-code-block text-code-block text-secondary-fixed">
+              governor.stratoops.io/p99-guard: "12ms"
+            </div>
+</div>
+<div class="pt-space-md mt-space-sm flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-primary">GitOps Working Group</span>
+<span>Helm &amp; Kustomize</span>
+</div>
+</div>
+<!-- Tool Card 4 -->
+<div class="bg-surface-container-low p-space-lg rounded flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold font-mono">k8s-cost-operator</span>
+<div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs rounded">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">star</span>
+<span class="font-code-block text-code-block text-on-surface font-bold">11.2k</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Real-time spot/graviton bin-packing Kubernetes daemonset. Dynamically re-packs stateless workloads into low-cost compute pools with sub-second eviction shielding.
+            </p>
+<div class="p-space-sm rounded bg-surface-container-lowest font-code-block text-code-block text-secondary-fixed">
+              FinOps Certified Operator v2.4
+            </div>
+</div>
+<div class="pt-space-md mt-space-sm flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-tertiary-fixed">Avg 48% Savings</span>
+<span>Kubernetes Operator SDK</span>
+</div>
+</div>
+<!-- Tool Card 5 -->
+<div class="bg-surface-container-low p-space-lg rounded flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold font-mono">chaos-vault</span>
+<div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs rounded">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">star</span>
+<span class="font-code-block text-code-block text-on-surface font-bold">4.7k</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Deterministic partitioned network partitioner simulating transatlantic fiber degradation, hyper-latency, and AWS region blackholes for pre-flight failover validation.
+            </p>
+<div class="p-space-sm rounded bg-surface-container-lowest font-code-block text-code-block text-secondary-fixed">
+              chaos-vault inject --region us-east-1 --split
+            </div>
+</div>
+<div class="pt-space-md mt-space-sm flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-primary">Reliability Benchmark</span>
+<span>Rust Core</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: GLOBAL INNOVATION HUBS & FOLLOW-THE-SUN SRE ARCHITECTURE -->
+<section class="w-full bg-surface-container-lowest py-space-xl">
+<div class="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-xl">
+<div class="max-w-2xl flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-primary font-label-md text-label-md uppercase tracking-wider">
+<span class="font-mono text-tertiary-fixed">04 //</span>
+            Global Infrastructure Presence
+          </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">
+            Follow-The-Sun SRE Command Mesh
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Four interconnected engineering hubs orchestrating continuous operational vigilance. Structured baton handover every 8 hours with zero context decay.
+          </p>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-container px-space-md py-space-sm rounded">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed animate-ping"></span>
+<span class="font-label-sm text-label-sm uppercase text-on-surface font-mono">Follow-The-Sun Rotation: ACTIVE</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<!-- Hub 1: San Francisco -->
+<div class="bg-surface-container-low p-space-lg rounded flex flex-col justify-between relative overflow-hidden group">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-primary font-mono font-semibold">Global HQ</span>
+<span class="px-space-xs py-space-xs rounded bg-surface-container text-tertiary-fixed font-label-sm text-label-sm font-mono">14 Principal Fellows</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">San Francisco</h3>
+<p class="font-code-block text-code-block text-secondary-fixed-dim">555 Mission St, Suite 2400</p>
+</div>
+<div class="bg-surface-container-lowest/80 p-space-md rounded flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Local Time (PST)</span>
+<span class="font-headline-sm text-headline-sm text-primary font-mono local-clock" data-tz="America/Los_Angeles">--:--:--</span>
+</div>
+<div class="flex flex-col gap-space-xs text-body-sm text-body-sm text-on-surface-variant">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span>Core Domain:</span>
+<span class="text-on-surface font-mono">Distributed Foundations &amp; AI Infra</span>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm">
+<span>Shift Coverage:</span>
+<span class="text-on-surface font-mono">14:00 - 22:00 UTC</span>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm">
+<span>Primary Esc:</span>
+<span class="text-tertiary-fixed font-mono">Tier-3 Kernel Architect</span>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-xs border-t border-surface-container-high/40 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Handover To: Singapore</span>
+<span class="material-symbols-outlined text-[16px] text-primary">east</span>
+</div>
+</div>
+<!-- Hub 2: London -->
+<div class="bg-surface-container-low p-space-lg rounded flex flex-col justify-between relative overflow-hidden group">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-mono font-semibold">Financial Resilience</span>
+<span class="px-space-xs py-space-xs rounded bg-surface-container text-tertiary-fixed font-label-sm text-label-sm font-mono">12 Principal Fellows</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">London</h3>
+<p class="font-code-block text-code-block text-secondary-fixed-dim">100 Bishopsgate, Level 18</p>
+</div>
+<div class="bg-surface-container-lowest/80 p-space-md rounded flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Local Time (GMT)</span>
+<span class="font-headline-sm text-headline-sm text-primary font-mono local-clock" data-tz="Europe/London">--:--:--</span>
+</div>
+<div class="flex flex-col gap-space-xs text-body-sm text-body-sm text-on-surface-variant">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span>Core Domain:</span>
+<span class="text-on-surface font-mono">High-Freq Banking Resiliency</span>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm">
+<span>Shift Coverage:</span>
+<span class="text-on-surface font-mono">06:00 - 14:00 UTC</span>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm">
+<span>Primary Esc:</span>
+<span class="text-tertiary-fixed font-mono">Tier-3 Low-Latency Lead</span>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-xs border-t border-surface-container-high/40 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Handover To: Frankfurt / SFO</span>
+<span class="material-symbols-outlined text-[16px] text-primary">east</span>
+</div>
+</div>
+<!-- Hub 3: Frankfurt -->
+<div class="bg-surface-container-low p-space-lg rounded flex flex-col justify-between relative overflow-hidden group">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-mono font-semibold">Sovereign Mesh</span>
+<span class="px-space-xs py-space-xs rounded bg-surface-container text-tertiary-fixed font-label-sm text-label-sm font-mono">11 Principal Fellows</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Frankfurt</h3>
+<p class="font-code-block text-code-block text-secondary-fixed-dim">Mainzer Landstraße 50</p>
+</div>
+<div class="bg-surface-container-lowest/80 p-space-md rounded flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Local Time (CET)</span>
+<span class="font-headline-sm text-headline-sm text-primary font-mono local-clock" data-tz="Europe/Berlin">--:--:--</span>
+</div>
+<div class="flex flex-col gap-space-xs text-body-sm text-body-sm text-on-surface-variant">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span>Core Domain:</span>
+<span class="text-on-surface font-mono">EU Sovereign Cloud &amp; GDPR</span>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm">
+<span>Shift Coverage:</span>
+<span class="text-on-surface font-mono">07:00 - 15:00 UTC</span>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm">
+<span>Primary Esc:</span>
+<span class="text-tertiary-fixed font-mono">Tier-3 Cryptography Lead</span>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-xs border-t border-surface-container-high/40 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Handover To: London</span>
+<span class="material-symbols-outlined text-[16px] text-primary">east</span>
+</div>
+</div>
+<!-- Hub 4: Singapore -->
+<div class="bg-surface-container-low p-space-lg rounded flex flex-col justify-between relative overflow-hidden group">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-mono font-semibold">APAC Edge Network</span>
+<span class="px-space-xs py-space-xs rounded bg-surface-container text-tertiary-fixed font-label-sm text-label-sm font-mono">11 Principal Fellows</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Singapore</h3>
+<p class="font-code-block text-code-block text-secondary-fixed-dim">1 Marina Boulevard</p>
+</div>
+<div class="bg-surface-container-lowest/80 p-space-md rounded flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Local Time (SGT)</span>
+<span class="font-headline-sm text-headline-sm text-primary font-mono local-clock" data-tz="Asia/Singapore">--:--:--</span>
+</div>
+<div class="flex flex-col gap-space-xs text-body-sm text-body-sm text-on-surface-variant">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span>Core Domain:</span>
+<span class="text-on-surface font-mono">Low-Latency Asian Edge Mesh</span>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm">
+<span>Shift Coverage:</span>
+<span class="text-on-surface font-mono">22:00 - 06:00 UTC</span>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm">
+<span>Primary Esc:</span>
+<span class="text-tertiary-fixed font-mono">Tier-3 Edge Mesh Fellow</span>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-xs border-t border-surface-container-high/40 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Handover To: London / Frankfurt</span>
+<span class="material-symbols-outlined text-[16px] text-primary">east</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: INSTITUTIONAL TRUST, SECURITY & COMPLIANCE CERTIFICATIONS -->
+<section class="w-full bg-surface py-space-xl">
+<div class="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-xl">
+<div class="max-w-2xl flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-primary font-label-md text-label-md uppercase tracking-wider">
+<span class="font-mono text-tertiary-fixed">05 //</span>
+            Cryptographic Integrity
+          </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">
+            Institutional Trust &amp; Audited Compliance
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Our advisory workflows undergo rigorous independent tier-1 audits. All advisory deliverables, code signatures, and container baselines are signed with verified cryptographic keys.
+          </p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary-fixed">verified</span>
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-mono">Continuous Pen-Testing &amp; Key Rotation Active</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<!-- Cert 1 -->
+<div class="bg-surface-container-low p-space-lg rounded flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">SOC 2 Type II</span>
+<span class="px-space-xs py-space-xs rounded bg-surface-container text-tertiary-fixed font-label-sm text-label-sm font-mono">UNQUALIFIED OPINION</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Comprehensive annual audit across Security, Availability, Processing Integrity, and Confidentiality conducted by Schellman &amp; Company.
+            </p>
+<div class="bg-surface-container-lowest p-space-xs rounded font-code-block text-code-block text-secondary-fixed">
+              SHA256: 9e4f21b7c01a93e5d0f622e...b94d
+            </div>
+</div>
+<div class="pt-space-md mt-space-md flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Period: 2024-2025 Continuous</span>
+<a class="text-primary hover:underline flex items-center gap-space-xs" href="#">
+              Verify Sig <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Cert 2 -->
+<div class="bg-surface-container-low p-space-lg rounded flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">ISO / IEC 27001:2022</span>
+<span class="px-space-xs py-space-xs rounded bg-surface-container text-tertiary-fixed font-label-sm text-label-sm font-mono">CERTIFIED</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              International standard specification for Information Security Management Systems (ISMS), covering all four global consulting hubs and remote fellows.
+            </p>
+<div class="bg-surface-container-lowest p-space-xs rounded font-code-block text-code-block text-secondary-fixed">
+              CERT-ID: BSI-ISMS-749210-EN
+            </div>
+</div>
+<div class="pt-space-md mt-space-md flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Registrar: BSI Group</span>
+<a class="text-primary hover:underline flex items-center gap-space-xs" href="#">
+              Verify Sig <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Cert 3 -->
+<div class="bg-surface-container-low p-space-lg rounded flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">PCI-DSS Level 1</span>
+<span class="px-space-xs py-space-xs rounded bg-surface-container text-tertiary-fixed font-label-sm text-label-sm font-mono">QSA VALIDATED</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Rigorous compliance for financial institutions and cardholder data environments (CDE). Complete network tokenization and secretless AWS/K8s architectures.
+            </p>
+<div class="bg-surface-container-lowest p-space-xs rounded font-code-block text-code-block text-secondary-fixed">
+              RoC-HASH: 489f3a9e01dc...e91a78
+            </div>
+</div>
+<div class="pt-space-md mt-space-md flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Scope: Full Multi-Cloud Card Data</span>
+<a class="text-primary hover:underline flex items-center gap-space-xs" href="#">
+              Verify Sig <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Cert 4 -->
+<div class="bg-surface-container-low p-space-lg rounded flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">HIPAA &amp; HITECH</span>
+<span class="px-space-xs py-space-xs rounded bg-surface-container text-tertiary-fixed font-label-sm text-label-sm font-mono">BAA READY</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Pre-signed Business Associate Agreement capabilities for healthcare and life sciences migrations, encrypting protected health info (ePHI) in flight and at rest.
+            </p>
+<div class="bg-surface-container-lowest p-space-xs rounded font-code-block text-code-block text-secondary-fixed">
+              KMS-POLICY: Envelope AES-256-GCM
+            </div>
+</div>
+<div class="pt-space-md mt-space-md flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Healthcare Safe-Harbor Compliant</span>
+<a class="text-primary hover:underline flex items-center gap-space-xs" href="#">
+              Verify Sig <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Cert 5 -->
+<div class="bg-surface-container-low p-space-lg rounded flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">EU Sovereign Cloud</span>
+<span class="px-space-xs py-space-xs rounded bg-surface-container text-tertiary-fixed font-label-sm text-label-sm font-mono">GDPR / C5 SECURE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Adherence to BSI C5 (Cloud Computing Compliance Criteria Catalogue) ensuring strict European data sovereignty, zero US CLOUD Act extraction vectors.
+            </p>
+<div class="bg-surface-container-lowest p-space-xs rounded font-code-block text-code-block text-secondary-fixed">
+              BSI-C5: Type 2 Sovereign Enclave
+            </div>
+</div>
+<div class="pt-space-md mt-space-md flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Jurisdiction: EU-Only Boundaries</span>
+<a class="text-primary hover:underline flex items-center gap-space-xs" href="#">
+              Verify Sig <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Cert 6 -->
+<div class="bg-surface-container-low p-space-lg rounded flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Sigstore &amp; SLSA-4</span>
+<span class="px-space-xs py-space-xs rounded bg-surface-container text-tertiary-fixed font-label-sm text-label-sm font-mono">SUPPLY CHAIN LEVEL 4</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Every container image, binary artifact, and Helm release generated by StratoOps carries an immutable Cosign signature and automated SBOM verification.
+            </p>
+<div class="bg-surface-container-lowest p-space-xs rounded font-code-block text-code-block text-secondary-fixed">
+              COSIGN: cosign verify --key pub.pem
+            </div>
+</div>
+<div class="pt-space-md mt-space-md flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Reproducible Builds Guaranteed</span>
+<a class="text-primary hover:underline flex items-center gap-space-xs" href="#">
+              Verify Sig <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: PRINCIPAL-IN-RESIDENCE TECHNICAL ADVISORY PROGRAM -->
+<section class="w-full bg-surface-container-lowest py-space-xl">
+<div class="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+<div class="bg-surface-container p-space-lg md:p-space-xl rounded relative overflow-hidden">
+<div class="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-xl">
+<div class="max-w-2xl flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs text-primary font-label-md text-label-md uppercase tracking-wider">
+<span class="font-mono text-tertiary-fixed">06 //</span>
+              Embedded Leadership Model
+            </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-extrabold tracking-tight">
+              Principal-in-Residence (PiR) Advisory Program
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Embed a distinguished StratoOps Principal Fellow directly alongside your CTO, VP of Infrastructure, and Architecture Review Board. We provide executive governance, M&amp;A cloud due diligence, and direct roadmap architectural stewardship without headhunter friction.
+            </p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md pt-space-xs">
+<div class="flex flex-col gap-space-xs bg-surface-container-low p-space-sm rounded">
+<span class="font-label-sm text-label-sm text-primary uppercase font-mono">Track Alpha</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">C-Suite Retainer</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Strategic roadmap review, FinOps cost ceilings &amp; board advisory.</span>
+</div>
+<div class="flex flex-col gap-space-xs bg-surface-container-low p-space-sm rounded">
+<span class="font-label-sm text-label-sm text-primary uppercase font-mono">Track Beta</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Embedded ARB</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lead weekly Architecture Review Boards with full veto authority.</span>
+</div>
+<div class="flex flex-col gap-space-xs bg-surface-container-low p-space-sm rounded">
+<span class="font-label-sm text-label-sm text-primary uppercase font-mono">Track Gamma</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">M&amp;A Due Diligence</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Deep-dive technical debt, licensing risks &amp; migration scoping.</span>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-auto shrink-0 bg-surface-container-low p-space-lg rounded flex flex-col gap-space-md min-w-[320px]">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Principal Fellow Allocation</span>
+<div class="flex flex-col gap-space-xs">
+<span class="font-body-sm text-body-sm text-tertiary-fixed font-mono flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed"></span> Q2/Q3 Fellow Slots: 2 Openings
+              </span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Commence Scoping</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Direct discussions with our Fellows Committee. Zero recruiter intermediaries.
+            </p>
+<a class="inline-flex items-center justify-center gap-space-xs px-space-md py-space-sm bg-primary-container text-on-primary-container font-label-lg text-label-lg uppercase rounded shadow-lg hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all cursor-pointer" data-path="contact" href="#">
+              Schedule Fellow Consultation
+              <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+</a>
+<div class="font-code-block text-code-block text-center text-on-surface-variant">
+              CONFIDENTIAL_NDA_PRE-EXECUTED: READY
+            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Filterable fellow bios
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const fellowCards = document.querySelectorAll('.fellow-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => {
+        b.classList.remove('bg-primary-container', 'text-on-primary-container');
+        b.classList.add('bg-transparent', 'text-on-surface-variant');
+      });
+      btn.classList.add('bg-primary-container', 'text-on-primary-container');
+      btn.classList.remove('bg-transparent', 'text-on-surface-variant');
+
+      const filter = btn.getAttribute('data-filter');
+      fellowCards.forEach(card => {
+        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Follow-the-sun real-time clocks
+  function updateClocks() {
+    const clockElements = document.querySelectorAll('.local-clock');
+    clockElements.forEach(el => {
+      const tz = el.getAttribute('data-tz');
+      try {
+        const now = new Date();
+        const formatter = new Intl.DateTimeFormat('en-GB', {
+          timeZone: tz,
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit',
+          hour12: false
+        });
+        el.textContent = formatter.format(now);
+      } catch (e) {
+        el.textContent = '12:00:00';
+      }
+    });
+  }
+  updateClocks();
+  setInterval(updateClocks, 1000);
+</script></main><footer class="w-full bg-surface-container-lowest text-on-surface"><div class="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin py-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl mb-space-xl"><div class="flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><img alt="StratoOps Cloud &amp; DevOps Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Vi7rqxSz8ptX-zcyMsz1MAinyhkdaVLrAcS-kr3oJUzJKxvDawb1PhDZ7pKG7mENuOuDZTQTHLazJSQktZHJdMi5-TSTW9p8gzDnv_iXnTlJK8zovsBBuL-kRFmuoc_9vvwTjBkVsyq2TSrK343xATPgQqZeJ6kcraxZ9euAjQHW2ruFFHJmz7vxz2dKWyBuYtB9_pcJuxNbMvgX7G2CpTsfnXEtsyBT0zxKUYHmYQYjSh6msVdb9h3IIY"/><span class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight uppercase">Strato<span class="text-secondary">Ops</span></span></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Architecting resilient, scalable multi-cloud infrastructure and high-velocity DevOps pipelines with zero-downtime guarantees.</p><div class="flex flex-wrap gap-space-xs mt-space-sm"><span class="px-space-sm py-space-xs rounded bg-surface-container text-secondary font-label-sm text-label-sm uppercase">AWS Premier</span><span class="px-space-sm py-space-xs rounded bg-surface-container text-tertiary-fixed font-label-sm text-label-sm uppercase">CNCF Silver</span><span class="px-space-sm py-space-xs rounded bg-surface-container text-primary font-label-sm text-label-sm uppercase">Azure Expert MSP</span></div></div><div class="flex flex-col gap-space-sm"><h4 class="font-label-lg text-label-lg text-primary uppercase font-semibold mb-space-xs">Solutions</h4><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><li class="hover:text-on-surface transition-colors"><a class="" data-path="services" href="#">Zero-Downtime Cloud Migration</a></li><li class="hover:text-on-surface transition-colors"><a class="" data-path="services" href="#">Cloud-Native Kubernetes &amp; Meshes</a></li><li class="hover:text-on-surface transition-colors"><a class="" data-path="services" href="#">Terraform &amp; GitOps Automation</a></li><li class="hover:text-on-surface transition-colors"><a class="" data-path="services" href="#">24/7 SRE &amp; Observability Mesh</a></li><li class="hover:text-on-surface transition-colors"><a class="" data-path="services" href="#">FinOps Cloud Cost Reduction</a></li></ul></div><div class="flex flex-col gap-space-sm"><h4 class="font-label-lg text-label-lg text-primary uppercase font-semibold mb-space-xs">Company &amp; Insights</h4><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><li class="hover:text-on-surface transition-colors"><a class="" data-path="about-leadership" href="#">About &amp; Executive Leadership</a></li><li class="hover:text-on-surface transition-colors"><a class="" data-path="case-studies" href="#">Engineering Case Studies</a></li><li class="hover:text-on-surface transition-colors"><a class="" data-path="technologies" href="#">Tech Stack &amp; Architecture Benchmarks</a></li><li class="hover:text-on-surface transition-colors"><a class="" data-path="contact" href="#">Enterprise Security &amp; Compliance</a></li><li class="hover:text-on-surface transition-colors"><a class="" data-path="contact" href="#">Careers &amp; SRE Fellowships</a></li></ul></div><div class="flex flex-col gap-space-sm"><h4 class="font-label-lg text-label-lg text-primary uppercase font-semibold mb-space-xs">Consulting Offices</h4><div class="font-body-sm text-body-sm text-on-surface-variant flex flex-col gap-space-xs"><p class=""><span class="text-on-surface font-semibold">San Francisco:</span> 555 Mission St, Suite 2400</p><p class=""><span class="text-on-surface font-semibold">London:</span> 100 Bishopsgate, Level 18</p><p class=""><span class="text-on-surface font-semibold">Singapore:</span> 1 Marina Boulevard</p><p class=""><span class="text-on-surface font-semibold">Frankfurt:</span> Mainzer Landstraße 50</p></div><div class="mt-space-sm flex flex-col gap-space-xs font-label-md text-label-md text-secondary"><a class="hover:text-primary transition-colors flex items-center gap-space-xs" href="mailto:advisory@stratoops.internal"><span class="material-symbols-outlined text-[16px]">mail</span>advisory@stratoops.internal</a><a class="hover:text-primary transition-colors flex items-center gap-space-xs" href="tel:+18005550199"><span class="material-symbols-outlined text-[16px]">call</span>+1 (800) 555-0199</a></div></div></div><div class="pt-space-lg bg-surface-container-low/40 rounded px-space-md py-space-sm flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-on-surface-variant"><div class="flex flex-wrap items-center gap-space-md"><span class="font-label-sm text-label-sm uppercase text-on-surface">© 2025 StratoOps Global Consulting Ltd. All rights reserved.</span><span class="px-space-xs py-space-xs rounded bg-surface-container font-label-sm text-label-sm text-tertiary-fixed">SOC2 Type II Certified</span><span class="px-space-xs py-space-xs rounded bg-surface-container font-label-sm text-label-sm text-secondary">ISO 27001 Ready</span></div><div class="flex items-center gap-space-md font-label-sm text-label-sm uppercase"><a class="hover:text-on-surface transition-colors" data-path="contact" href="#">Privacy Policy</a><a class="hover:text-on-surface transition-colors" data-path="contact" href="#">Terms of Service</a><a class="hover:text-on-surface transition-colors" data-path="contact" href="#">Status Telemetry</a></div></div></div></footer></body></html>

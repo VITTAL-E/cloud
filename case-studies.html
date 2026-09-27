@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html class="" dir="ltr" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>StratoOps - Cloud Migration &amp; DevOps Consulting</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"inverse-primary":"#006970","on-secondary-fixed":"#001e2c","error":"#ffb4ab","surface-dim":"#0f131c","secondary-fixed":"#c4e7ff","surface-container-lowest":"#0a0e16","on-primary":"#00363a","tertiary-container":"#65f2b5","inverse-surface":"#dfe2ee","outline":"#849495","on-secondary-fixed-variant":"#004c69","on-background":"#dfe2ee","on-tertiary-fixed-variant":"#005236","on-error":"#690005","tertiary":"#d8ffe7","surface-container-high":"#262a33","on-tertiary-fixed":"#002113","surface-container":"#1c2028","inverse-on-surface":"#2c3039","surface-container-low":"#181c24","surface-variant":"#31353e","primary-fixed-dim":"#00dbe9","on-error-container":"#ffdad6","primary-fixed":"#7df4ff","on-surface":"#dfe2ee","secondary-fixed-dim":"#7bd0ff","primary":"#dbfcff","secondary":"#7bd0ff","surface-container-highest":"#31353e","outline-variant":"#3b494b","surface":"#0f131c","error-container":"#93000a","tertiary-fixed-dim":"#4edea3","on-surface-variant":"#b9cacb","secondary-container":"#00a6e0","on-primary-fixed-variant":"#004f54","on-primary-fixed":"#002022","primary-container":"#00f0ff","surface-bright":"#353942","tertiary-fixed":"#6ffbbe","background":"#0f131c","on-primary-container":"#006970","on-tertiary":"#003824","surface-tint":"#00dbe9","on-secondary":"#00354a","on-tertiary-container":"#006d4a","on-secondary-container":"#00374d"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin-tablet":"2rem","space-sm":"0.5rem","space-md":"1rem","space-lg":"1.5rem","gutter-mobile":"1rem","gutter":"1.5rem","space-xl":"2.5rem","margin-mobile":"1rem","margin":"4rem","space-xs":"0.25rem"},"fontFamily":{"headline-xl":["Inter"],"label-sm":["JetBrains Mono"],"label-lg":["JetBrains Mono"],"headline-md":["Inter"],"body-lg":["Inter"],"code-block":["JetBrains Mono"],"body-md":["Inter"],"headline-xl-mobile":["Inter"],"headline-lg":["Inter"],"body-sm":["Inter"],"label-md":["JetBrains Mono"],"headline-lg-mobile":["Inter"],"headline-sm":["Inter"]},"fontSize":{"headline-xl":["56px",{"lineHeight":"64px","letterSpacing":"-0.03em","fontWeight":"800"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"500"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-md":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"-0.005em","fontWeight":"400"}],"code-block":["13px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"body-md":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"headline-xl-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.025em","fontWeight":"800"}],"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"500"}],"headline-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"700"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}};</script><link href="css/site.css" rel="stylesheet"/><script defer="True" src="js/app.js"></script></head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col"><header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-20 w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><a class="flex items-center gap-space-sm group" data-path="home-enterprise-migration" href="#"><img alt="StratoOps Cloud &amp; DevOps Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Vi7rqxSz8ptX-zcyMsz1MAinyhkdaVLrAcS-kr3oJUzJKxvDawb1PhDZ7pKG7mENuOuDZTQTHLazJSQktZHJdMi5-TSTW9p8gzDnv_iXnTlJK8zovsBBuL-kRFmuoc_9vvwTjBkVsyq2TSrK343xATPgQqZeJ6kcraxZ9euAjQHW2ruFFHJmz7vxz2dKWyBuYtB9_pcJuxNbMvgX7G2CpTsfnXEtsyBT0zxKUYHmYQYjSh6msVdb9h3IIY"/><span class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight uppercase">Strato<span class="text-secondary">Ops</span></span></a></div><nav class="hidden xl:flex items-center gap-space-lg" data-active-classes="text-primary font-semibold"><div class="relative group py-space-sm"><button class="flex items-center gap-space-xs font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer uppercase">Home<span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:text-primary transition-transform duration-200 group-hover:rotate-180">expand_more</span></button><div class="absolute top-full start-0 hidden group-hover:flex flex-col w-64 p-space-xs bg-surface-container-high rounded-lg shadow-[0_8px_32px_-8px_rgba(0,0,0,0.6)] z-50"><a class="px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="home-enterprise-migration" href="#">Home 1: Enterprise Migration</a><a class="px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="home-cloud-native-sre" href="#">Home 2: Cloud Native &amp; SRE</a></div></div><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors uppercase" data-path="services" href="#">Services</a><a aria-current="page" class="transition-colors uppercase text-primary font-semibold" data-path="case-studies" href="#">Case Studies</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors uppercase" data-path="technologies" href="#">Technologies</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors uppercase" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-sm shrink-0"><button class="flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm uppercase transition-colors cursor-pointer" id="rtl-toggle-btn" type="button"><span class="material-symbols-outlined text-[16px] text-secondary">language</span><span class="" data-rtl-label="true">RTL</span></button><button class="p-space-xs rounded bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors cursor-pointer flex items-center justify-center" id="theme-toggle-btn" type="button"><span class="material-symbols-outlined text-[20px] text-primary-fixed">dark_mode</span></button><a class="hidden sm:inline-flex items-center justify-center px-space-md py-space-sm bg-primary-container text-on-primary-container font-label-lg text-label-lg uppercase rounded shadow-[0_0_16px_rgba(0,240,255,0.2)] hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all" data-path="contact" href="#">Schedule Audit</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface flex-1"><div class="flex flex-col w-full text-on-surface">
+<!-- ========================================================================= -->
+<!-- SECTION 1: HERO - PROVEN TRACK RECORD AT ENTERPRISE SCALE                 -->
+<!-- ========================================================================= -->
+<section class="relative w-full overflow-hidden bg-surface-container-lowest pb-space-xl">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary-container/10 pointer-events-none"></div>
+<div class="absolute top-0 right-1/4 w-96 h-96 bg-primary-container/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin pt-space-xl relative z-10">
+<!-- Overline & Status Badge -->
+<div class="flex items-center gap-space-sm mb-space-md">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-tertiary-fixed-dim uppercase tracking-wider shadow-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim animate-pulse"></span>
+          Battle-Tested Deployments
+        </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">// Enterprise Verification Registry</span>
+</div>
+<!-- Main Headline + Subhead -->
+<div class="max-w-4xl mb-space-xl">
+<h1 class="font-headline-xl text-headline-xl text-primary font-extrabold tracking-tight mb-space-md">
+          Engineering Resilience: Real-World Enterprise Transformations
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl leading-relaxed">
+          Explore how Fortune 500 enterprises and high-growth unicorns modernize mission-critical systems with StratoOps. Audited cutovers, zero data-loss pipelines, and sustained operational mastery.
+        </p>
+</div>
+<!-- High-Level Impact Stats Ribbon -->
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-xl">
+<div class="bg-surface-container-low p-space-lg rounded-xl shadow-md flex flex-col justify-between">
+<div class="font-label-sm text-label-sm uppercase text-on-surface-variant mb-space-xs tracking-wider">Reliability Metric</div>
+<div class="font-headline-xl text-headline-xl font-bold text-primary tracking-tight">100%</div>
+<div class="font-body-sm text-body-sm text-secondary mt-1">On-Time Migration Delivery</div>
+<div class="w-full bg-surface-container-high h-1 rounded-full mt-space-md overflow-hidden">
+<div class="bg-primary-container h-full w-full"></div>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-lg rounded-xl shadow-md flex flex-col justify-between">
+<div class="font-label-sm text-label-sm uppercase text-on-surface-variant mb-space-xs tracking-wider">Cutover Integrity</div>
+<div class="font-headline-xl text-headline-xl font-bold text-tertiary-fixed-dim tracking-tight">0</div>
+<div class="font-body-sm text-body-sm text-tertiary mt-1">Unplanned Outages Across 80+ Cutovers</div>
+<div class="w-full bg-surface-container-high h-1 rounded-full mt-space-md overflow-hidden">
+<div class="bg-tertiary-fixed-dim h-full w-full"></div>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-lg rounded-xl shadow-md flex flex-col justify-between">
+<div class="font-label-sm text-label-sm uppercase text-on-surface-variant mb-space-xs tracking-wider">Cloud Efficiency</div>
+<div class="font-headline-xl text-headline-xl font-bold text-secondary-fixed tracking-tight">$42M+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1">Combined Enterprise OpEx Savings</div>
+<div class="w-full bg-surface-container-high h-1 rounded-full mt-space-md overflow-hidden">
+<div class="bg-secondary-fixed h-full w-3/4"></div>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-lg rounded-xl shadow-md flex flex-col justify-between">
+<div class="font-label-sm text-label-sm uppercase text-on-surface-variant mb-space-xs tracking-wider">Cluster Footprint</div>
+<div class="font-headline-xl text-headline-xl font-bold text-primary tracking-tight">10M+</div>
+<div class="font-body-sm text-body-sm text-secondary mt-1">Active Containers Under Management</div>
+<div class="w-full bg-surface-container-high h-1 rounded-full mt-space-md overflow-hidden">
+<div class="bg-primary-fixed-dim h-full w-5/6"></div>
+</div>
+</div>
+</div><div class="mb-space-xl bg-surface-container-low p-space-md lg:p-space-lg rounded-xl shadow-2xl relative overflow-hidden shadow-[0_0_16px_rgba(0,240,255,0.2)]"><div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center"><div class="lg:col-span-7 relative rounded-lg overflow-hidden group shadow-lg"><img alt="Enterprise digital transformation architecture blueprint" class="w-full h-auto object-cover rounded-lg group-hover:scale-[1.02] transition-transform duration-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMaZnfgaO76GQHOsEwggnqyQsPgi2kB3-vDnwfdWBF85t55q4Ml5EFMOVWwYOJXiKDFs0zT6v_uhrG0LZRb4cnAJ-Zsws8fJd-Nmz4CyrXYsaf37yv2aayXuAoVw4KWNu_RrhKPex6krWzR0csfX_vqs-MAcKs8VLPCJZKJHPKwF8JPVRMV2bSW2jQLp7NHEUobsoVYPicJvZK0FgordDO8yAfU9cAoHI_wIL3l4-aLxuv1BZq_pL0IA"/><div class="absolute top-3 left-3 flex items-center gap-1.5 px-space-sm py-1 rounded bg-surface-container-lowest/80 backdrop-blur-md font-label-sm text-label-sm text-primary-fixed uppercase tracking-wider shadow-sm"><span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span><span class="">Zero Data Loss Topology</span></div><div class="absolute bottom-3 right-3 px-space-xs py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md font-code-block text-code-block text-[11px] text-on-surface-variant font-label-sm"><span class="">LAT 37.7749° N // LON 122.4194° W</span></div></div><div class="lg:col-span-5 flex flex-col justify-between h-full gap-space-md"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm uppercase text-secondary font-bold tracking-wider">// Topology Telemetry Live</span><span class="px-space-xs py-0.5 rounded bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm uppercase">Audited &amp; Verified</span></div><div><h3 class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight mb-space-xs">Audited Enterprise Architecture Blueprint</h3><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">Deterministic multi-region failover matrix with synchronized distributed ledger partitions. Verified against stress-test chaos events across tier-1 financial transaction rails.</p><div class="flex flex-wrap gap-space-xs"><span class="px-space-xs py-0.5 rounded bg-surface-container font-code-block text-code-block text-secondary">Dual-Region EKS</span><span class="px-space-xs py-0.5 rounded bg-surface-container font-code-block text-code-block text-tertiary-fixed">Aurora Global Mesh</span><span class="px-space-xs py-0.5 rounded bg-surface-container font-code-block text-code-block text-on-surface">0 RPO Enforced</span></div></div><div class="pt-space-xs"><a class="inline-flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container-high hover:bg-primary-container text-on-surface hover:text-on-primary-container font-label-md text-label-md uppercase rounded transition-all cursor-pointer" data-path="services" href="#"><span class="">Inspect Architecture Matrix</span><span class="material-symbols-outlined text-[16px]">open_in_new</span></a></div></div></div></div>
+<!-- Filter Controls: Industry & Challenge -->
+<div class="bg-surface-container p-space-md rounded-xl shadow-md flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<!-- Industry Filter Buttons -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider mr-2">Sector:</span>
+<button class="filter-industry-btn active px-space-md py-1.5 rounded font-label-sm text-label-sm uppercase bg-primary-container text-on-primary-container transition-all cursor-pointer" data-filter="all" type="button">All Sectors</button>
+<button class="filter-industry-btn px-space-md py-1.5 rounded font-label-sm text-label-sm uppercase bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" data-filter="fintech" type="button">FinTech</button>
+<button class="filter-industry-btn px-space-md py-1.5 rounded font-label-sm text-label-sm uppercase bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" data-filter="healthcare" type="button">Healthcare</button>
+<button class="filter-industry-btn px-space-md py-1.5 rounded font-label-sm text-label-sm uppercase bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" data-filter="media" type="button">Media &amp; CDN</button>
+<button class="filter-industry-btn px-space-md py-1.5 rounded font-label-sm text-label-sm uppercase bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" data-filter="logistics" type="button">Logistics</button>
+<button class="filter-industry-btn px-space-md py-1.5 rounded font-label-sm text-label-sm uppercase bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" data-filter="saas" type="button">SaaS</button>
+</div>
+<!-- Challenge Filter Tags -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider mr-2">Vector:</span>
+<button class="filter-vector-btn px-space-sm py-1 rounded font-label-sm text-label-sm uppercase bg-surface-container-low text-secondary hover:bg-surface-container-highest transition-all cursor-pointer" data-vector="migration" type="button">Migration</button>
+<button class="filter-vector-btn px-space-sm py-1 rounded font-label-sm text-label-sm uppercase bg-surface-container-low text-secondary hover:bg-surface-container-highest transition-all cursor-pointer" data-vector="gitops" type="button">GitOps</button>
+<button class="filter-vector-btn px-space-sm py-1 rounded font-label-sm text-label-sm uppercase bg-surface-container-low text-secondary hover:bg-surface-container-highest transition-all cursor-pointer" data-vector="kubernetes" type="button">Kubernetes</button>
+<button class="filter-vector-btn px-space-sm py-1 rounded font-label-sm text-label-sm uppercase bg-surface-container-low text-secondary hover:bg-surface-container-highest transition-all cursor-pointer" data-vector="finops" type="button">FinOps</button>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- SECTION 2: FEATURED FLAGSHIP CASE STUDY - TIER-1 BANKING MIGRATION        -->
+<!-- ========================================================================= -->
+<section class="w-full bg-surface-container-low py-space-xl relative overflow-hidden">
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+<!-- Flagship Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-xl">
+<div>
+<div class="flex items-center gap-space-sm mb-space-xs">
+<span class="px-space-sm py-0.5 rounded bg-secondary-container/20 text-secondary font-label-sm text-label-sm uppercase">Case Study #F-01</span>
+<span class="px-space-sm py-0.5 rounded bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm uppercase">Flagship Engagement</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary font-bold tracking-tight">
+            Tier-1 Global Banking Core Re-Platforming
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mt-1">
+            Zero-downtime cutover across 14 million active retail &amp; corporate ledger accounts with active-active AWS EKS and Aurora PostgreSQL.
+          </p>
+</div>
+<div class="shrink-0 flex items-center gap-space-md">
+<div class="text-right">
+<div class="font-label-sm text-label-sm uppercase text-on-surface-variant">Asset Value Audited</div>
+<div class="font-headline-sm text-headline-sm font-bold text-primary">$45B+ Under Core Management</div>
+</div>
+</div>
+</div>
+<!-- Main Bento Grid for Case Details -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left: Context, Bottleneck, Strategic Execution -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<!-- Narrative Box -->
+<div class="bg-surface-container p-space-lg rounded-xl shadow-md flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">account_balance</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">The Mission Bottleneck</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Operating on aging on-premise mainframe partitions and monolithic Oracle RAC clusters across two private data centers, the bank faced quarterly release cycles that choked competitive velocity. An impending regulatory stress test (OCC &amp; ECB compliance) required automated cross-region recovery with zero transaction loss, which their legacy stack could not deliver.
+            </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md pt-space-xs">
+<div class="bg-surface-container-high p-space-md rounded-lg">
+<span class="font-label-sm text-label-sm uppercase text-error block mb-1">Pre-Cutover Friction</span>
+<p class="font-body-sm text-body-sm text-on-surface">Release rate limited to once per 90 days. Batch reconciliation running over 14 hours each night with persistent ledger lockouts.</p>
+</div>
+<div class="bg-surface-container-high p-space-md rounded-lg">
+<span class="font-label-sm text-label-sm uppercase text-tertiary-fixed block mb-1">Target Architectural Mandate</span>
+<p class="font-body-sm text-body-sm text-on-surface">Sub-30ms API latency, active-active multi-region failover, immutable GitOps deployment pipeline with verifiable audit trail.</p>
+</div>
+</div>
+</div>
+<!-- Solution Pipeline Summary -->
+<div class="bg-surface-container p-space-lg rounded-xl shadow-md flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary-fixed-dim text-[24px]">schema</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">StratoOps Engineered Solution</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              We orchestrated a four-phase strangler-fig pattern, dissecting the monolith into 48 domain-driven microservices running on dual-region AWS EKS clusters. We deployed an active-active Aurora Global Database paired with multi-broker Kafka streaming clusters for bidirectional ledger reconciliation.
+            </p>
+<div class="flex flex-wrap gap-space-xs pt-space-xs">
+<span class="px-space-sm py-1 rounded bg-surface-container-high font-code-block text-code-block text-primary">AWS EKS 1.29</span>
+<span class="px-space-sm py-1 rounded bg-surface-container-high font-code-block text-code-block text-secondary">Aurora Global Postgres</span>
+<span class="px-space-sm py-1 rounded bg-surface-container-high font-code-block text-code-block text-tertiary-fixed">Confluent Kafka</span>
+<span class="px-space-sm py-1 rounded bg-surface-container-high font-code-block text-code-block text-on-surface-variant">ArgoCD Enterprise</span>
+<span class="px-space-sm py-1 rounded bg-surface-container-high font-code-block text-code-block text-on-surface-variant">HashiCorp Vault</span>
+<span class="px-space-sm py-1 rounded bg-surface-container-high font-code-block text-code-block text-on-surface-variant">Cilium eBPF CNI</span>
+</div>
+</div>
+<!-- Proof Metrics Cards -->
+<div class="grid grid-cols-3 gap-space-md">
+<div class="bg-surface-container p-space-md rounded-lg shadow-sm text-center">
+<div class="font-headline-md text-headline-md text-primary font-bold">99.999%</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1">Uptime Under Peak Peak Load</div>
+</div>
+<div class="bg-surface-container p-space-md rounded-lg shadow-sm text-center">
+<div class="font-headline-md text-headline-md text-tertiary font-bold">24ms</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1">P99 Core Latency (Was 280ms)</div>
+</div>
+<div class="bg-surface-container p-space-md rounded-lg shadow-sm text-center">
+<div class="font-headline-md text-headline-md text-secondary font-bold">14M</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1">Migrated Active Accounts</div>
+</div>
+</div>
+</div>
+<!-- Right: Architecture Blueprint Visualizer (Before / After) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<div class="bg-surface-container p-space-lg rounded-xl shadow-md h-full flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-bold tracking-wider">// Live Architectural Topology</span>
+<span class="px-space-xs py-0.5 rounded bg-tertiary-container/30 text-tertiary-fixed font-label-sm text-label-sm uppercase">Active-Active Dual Cloud</span>
+</div>
+<!-- Blueprint Interactive SVG Visualizer -->
+<div class="w-full bg-surface-container-lowest rounded-lg p-space-md relative overflow-hidden shadow-inner">
+<!-- SVG Architecture Schematic -->
+<svg class="w-full h-auto" fill="none" viewbox="0 0 420 320" xmlns="http://www.w3.org/2000/svg">
+<!-- Grid backdrop lines -->
+<defs>
+<pattern height="20" id="archGrid" patternunits="userSpaceOnUse" width="20">
+<line class="text-surface-container-high/40" stroke="currentColor" stroke-width="0.5" x1="0" x2="20" y1="0" y2="0"></line>
+<line class="text-surface-container-high/40" stroke="currentColor" stroke-width="0.5" x1="0" x2="0" y1="0" y2="20"></line>
+</pattern>
+</defs>
+<rect fill="url(#archGrid)" height="320" width="420"></rect>
+<!-- Edge Traffic & CDN -->
+<rect class="text-surface-container-high" fill="currentColor" height="32" rx="4" width="140" x="140" y="15"></rect>
+<text class="text-primary font-label-sm font-semibold" fill="currentColor" font-size="10" text-anchor="middle" x="210" y="35">Cloudflare Edge &amp; WAF</text>
+<!-- Downlink Arrows -->
+<path class="text-secondary" d="M180 47 V80 H90 V100" stroke="currentColor" stroke-dasharray="3 3" stroke-width="1.5"></path>
+<path class="text-secondary" d="M240 47 V80 H330 V100" stroke="currentColor" stroke-dasharray="3 3" stroke-width="1.5"></path>
+<!-- Region 1: US-East-1 (Primary Active) -->
+<rect class="text-surface-container-low" fill="currentColor" height="130" rx="6" stroke="none" width="180" x="20" y="100"></rect>
+<text class="text-primary font-label-sm" fill="currentColor" font-size="10" x="30" y="120">AWS us-east-1 (Active)</text>
+<rect class="text-surface-container-high" fill="currentColor" height="36" rx="4" width="150" x="35" y="132"></rect>
+<text class="text-on-surface font-label-sm" fill="currentColor" font-size="9" text-anchor="middle" x="110" y="154">EKS Core Cluster (48 Pods)</text>
+<rect class="text-surface-container-high" fill="currentColor" height="36" rx="4" width="150" x="35" y="178"></rect>
+<text class="text-secondary font-label-sm" fill="currentColor" font-size="9" text-anchor="middle" x="110" y="200">Aurora Global (Leader)</text>
+<!-- Region 2: US-West-2 (Standby Active) -->
+<rect class="text-surface-container-low" fill="currentColor" height="130" rx="6" stroke="none" width="180" x="220" y="100"></rect>
+<text class="text-primary font-label-sm" fill="currentColor" font-size="10" x="230" y="120">AWS us-west-2 (Active)</text>
+<rect class="text-surface-container-high" fill="currentColor" height="36" rx="4" width="150" x="235" y="132"></rect>
+<text class="text-on-surface font-label-sm" fill="currentColor" font-size="9" text-anchor="middle" x="310" y="154">EKS Core Cluster (48 Pods)</text>
+<rect class="text-surface-container-high" fill="currentColor" height="36" rx="4" width="150" x="235" y="178"></rect>
+<text class="text-tertiary-fixed font-label-sm" fill="currentColor" font-size="9" text-anchor="middle" x="310" y="200">Aurora Global (Replica)</text>
+<!-- Cross-Region Replication Link -->
+<path class="text-tertiary-fixed-dim" d="M185 196 H235" stroke="currentColor" stroke-width="2"></path>
+<circle class="text-primary-container" cx="210" cy="196" fill="currentColor" r="3"></circle>
+<text class="text-on-surface-variant font-label-sm" fill="currentColor" font-size="8" text-anchor="middle" x="210" y="212">&lt; 15ms Storage Sync</text>
+<!-- Observability / Telemetry Spine -->
+<rect class="text-surface-container-high" fill="currentColor" height="50" rx="6" width="380" x="20" y="250"></rect>
+<text class="text-secondary font-label-sm font-semibold" fill="currentColor" font-size="10" x="35" y="272">Unified Observability Plane</text>
+<text class="text-on-surface-variant font-body-sm" fill="currentColor" font-size="9" x="35" y="288">Prometheus Federation // OpenTelemetry // Cilium Service Mesh Flow Metrics</text>
+</svg>
+</div>
+<!-- Key Execution Milestone Feed -->
+<div class="mt-space-md space-y-2">
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed"></span> Cutover Execution Window:
+                  </span>
+<span class="font-code-block text-code-block text-primary">02:00 UTC - 04:30 UTC</span>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed"></span> Transaction Loss Metric:
+                  </span>
+<span class="font-code-block text-code-block text-tertiary-fixed">0 Transactions (Strict 0 RPO)</span>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> OCC Security Sign-Off:
+                  </span>
+<span class="font-code-block text-code-block text-on-surface">100% Unconditional Pass</span>
+</div>
+</div>
+</div>
+<!-- Download Deep Dive Spec CTA -->
+<div class="pt-space-md">
+<a class="w-full flex items-center justify-center gap-space-xs px-space-md py-space-sm bg-primary-container text-on-primary-container font-label-lg text-label-lg uppercase rounded shadow-sm hover:bg-secondary-fixed transition-all" data-path="contact" href="#">
+<span class="">Request Core Migration Architecture Brief</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- SECTION 3: GRID OF 4 TECHNICAL CASE STUDIES WITH ARCHITECTURE SPECS       -->
+<!-- ========================================================================= -->
+<section class="w-full bg-surface py-space-xl relative">
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-xl">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">// Technical Field Reports</span>
+<h2 class="font-headline-lg text-headline-lg text-primary font-bold tracking-tight mt-1">
+            Proven Engineering Architectures
+          </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Deep architectural interventions designed to eliminate operational friction, lower compute footprint, and harden security.
+        </p>
+</div>
+<!-- 4-Card Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg" id="case-studies-grid">
+<!-- CARD 1: HealthTech Unicorn -->
+<div class="case-card bg-surface-container-low p-space-lg rounded-xl shadow-md flex flex-col justify-between hover:bg-surface-container transition-all group" data-category="healthcare" data-vector="gitops kubernetes">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="px-space-sm py-0.5 rounded bg-surface-container-high text-tertiary-fixed font-label-sm text-label-sm uppercase">Healthcare / BioTech</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">HIPAA // SOC2 Type II</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary font-semibold mb-space-xs transition-colors">
+              HIPAA-Compliant Multi-Cluster GitOps Platform
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">
+              Architected a zero-trust continuous delivery pipeline on Google Cloud using Google Kubernetes Engine (GKE Enterprise) and Anthos Service Mesh. Automated sovereign boundary enforcement across 12 clinical patient-data stores.
+            </p>
+<!-- Technical Spec Chips -->
+<div class="flex flex-wrap gap-1.5 mb-space-md">
+<span class="px-space-xs py-0.5 rounded bg-surface-container font-code-block text-code-block text-secondary">Google Cloud</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container font-code-block text-code-block text-on-surface">GKE Anthos</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container font-code-block text-code-block text-on-surface">ArgoCD</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container font-code-block text-code-block text-on-surface">Kyverno</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container font-code-block text-code-block text-primary">Cosign Signatures</span>
+</div>
+<!-- Architecture Diagram Modal Trigger -->
+<button class="w-full flex items-center justify-between px-space-md py-space-xs bg-surface-container-high rounded text-on-surface hover:text-primary text-body-sm mb-space-md cursor-pointer transition-colors" onclick="openArchModal('modal-case-1')" type="button">
+<span class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">account_tree</span>
+<span class="">Inspect Pipeline Blueprint &amp; Audit Trail</span>
+</span>
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+</div>
+<div class="pt-space-md bg-surface-container-lowest/50 p-space-md rounded-lg flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant block">Deployment Speed</span>
+<span class="font-headline-sm text-headline-sm font-bold text-tertiary">85% Faster Releases</span>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant block">Audit Prep Time</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">3 Days (Was 6 Weeks)</span>
+</div>
+</div>
+</div>
+<!-- CARD 2: Media Streaming Giant -->
+<div class="case-card bg-surface-container-low p-space-lg rounded-xl shadow-md flex flex-col justify-between hover:bg-surface-container transition-all group" data-category="media" data-vector="kubernetes">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="px-space-sm py-0.5 rounded bg-surface-container-high text-secondary-fixed font-label-sm text-label-sm uppercase">Global Media &amp; OTT</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">40M Peak Concurrents</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary font-semibold mb-space-xs transition-colors">
+              Real-Time Observability &amp; Dynamic Edge Auto-Scaling
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">
+              Engineered ultra-responsive pod autoscaling powered by custom Prometheus query metrics and KEDA. Solved sudden 10x traffic surges during live sports broadcasts with preemptive warm-pool orchestrators.
+            </p>
+<!-- Technical Spec Chips -->
+<div class="flex flex-wrap gap-1.5 mb-space-md">
+<span class="px-space-xs py-0.5 rounded bg-surface-container font-code-block text-code-block text-secondary">AWS EKS</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container font-code-block text-code-block text-on-surface">KEDA Autoscaler</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container font-code-block text-code-block text-on-surface">Grafana Mimir</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container font-code-block text-code-block text-on-surface">Redis Cluster</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container font-code-block text-code-block text-primary">OpenTelemetry</span>
+</div>
+<!-- Architecture Diagram Modal Trigger -->
+<button class="w-full flex items-center justify-between px-space-md py-space-xs bg-surface-container-high rounded text-on-surface hover:text-primary text-body-sm mb-space-md cursor-pointer transition-colors" onclick="openArchModal('modal-case-2')" type="button">
+<span class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">account_tree</span>
+<span class="">Inspect Scaling Topology &amp; Spike Absorber</span>
+</span>
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+</div>
+<div class="pt-space-md bg-surface-container-lowest/50 p-space-md rounded-lg flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant block">Cold Boot Time</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">1.8 Seconds</span>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant block">Surge Headroom</span>
+<span class="font-headline-sm text-headline-sm font-bold text-tertiary">350,000 req/sec</span>
+</div>
+</div>
+</div>
+<!-- CARD 3: Global Logistics Corp -->
+<div class="case-card bg-surface-container-low p-space-lg rounded-xl shadow-md flex flex-col justify-between hover:bg-surface-container transition-all group" data-category="logistics" data-vector="migration">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="px-space-sm py-0.5 rounded bg-surface-container-high text-tertiary font-label-sm text-label-sm uppercase">Global Supply Chain</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Multi-Cloud DR</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary font-semibold mb-space-xs transition-colors">
+              Automated 4-Minute RTO &amp; 0-Second RPO Disaster Recovery
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">
+              Built an immutable asynchronous multi-cloud standby mesh across AWS and Microsoft Azure. Synchronized supply route telemetry and customs documentation across 42 maritime terminals with automated DNS switchover.
+            </p>
+<!-- Technical Spec Chips -->
+<div class="flex flex-wrap gap-1.5 mb-space-md">
+<span class="px-space-xs py-0.5 rounded bg-surface-container font-code-block text-code-block text-secondary">Terraform Enterprise</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container font-code-block text-code-block text-on-surface">Azure AKS</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container font-code-block text-code-block text-on-surface">AWS DynamoDB Global</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container font-code-block text-code-block text-on-surface">Route 53 ARC</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container font-code-block text-code-block text-primary">Packer Images</span>
+</div>
+<!-- Architecture Diagram Modal Trigger -->
+<button class="w-full flex items-center justify-between px-space-md py-space-xs bg-surface-container-high rounded text-on-surface hover:text-primary text-body-sm mb-space-md cursor-pointer transition-colors" onclick="openArchModal('modal-case-3')" type="button">
+<span class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">account_tree</span>
+<span class="">Inspect Multi-Cloud Failover Controller</span>
+</span>
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+</div>
+<div class="pt-space-md bg-surface-container-lowest/50 p-space-md rounded-lg flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant block">Recovery Time (RTO)</span>
+<span class="font-headline-sm text-headline-sm font-bold text-tertiary">3m 48s Guaranteed</span>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant block">Data Loss (RPO)</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">0 Seconds (Strict)</span>
+</div>
+</div>
+</div>
+<!-- CARD 4: Enterprise SaaS Platform -->
+<div class="case-card bg-surface-container-low p-space-lg rounded-xl shadow-md flex flex-col justify-between hover:bg-surface-container transition-all group" data-category="saas" data-vector="finops">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="px-space-sm py-0.5 rounded bg-surface-container-high text-primary-fixed-dim font-label-sm text-label-sm uppercase">Enterprise SaaS</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">FinOps Optimization</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary font-semibold mb-space-xs transition-colors">
+              FinOps Compute Re-Architecture &amp; Bill Halving
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">
+              Restructured an over-provisioned B2B SaaS cluster by migrating from x86 EC2 instances to AWS Graviton3 arm64 nodes, automated Karpenter bin-packing, and eliminating zombie cross-AZ egress bandwidth bottlenecks.
+            </p>
+<!-- Technical Spec Chips -->
+<div class="flex flex-wrap gap-1.5 mb-space-md">
+<span class="px-space-xs py-0.5 rounded bg-surface-container font-code-block text-code-block text-secondary">Karpenter Autoscaler</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container font-code-block text-code-block text-on-surface">AWS Graviton3</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container font-code-block text-code-block text-on-surface">Kubecost</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container font-code-block text-code-block text-on-surface">Datadog APM</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container font-code-block text-code-block text-primary">VPC Endpoints</span>
+</div>
+<!-- Architecture Diagram Modal Trigger -->
+<button class="w-full flex items-center justify-between px-space-md py-space-xs bg-surface-container-high rounded text-on-surface hover:text-primary text-body-sm mb-space-md cursor-pointer transition-colors" onclick="openArchModal('modal-case-4')" type="button">
+<span class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">account_tree</span>
+<span class="">Inspect Karpenter Allocation Schema</span>
+</span>
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+</div>
+<div class="pt-space-md bg-surface-container-lowest/50 p-space-md rounded-lg flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant block">Monthly AWS Bill</span>
+<span class="font-headline-sm text-headline-sm font-bold text-tertiary">$490k (Was $840k)</span>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant block">Annual Run-Rate Saved</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">$4.2M / Year</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- SECTION 4: BEFORE & AFTER ARCHITECTURE METRICS MATRIX                     -->
+<!-- ========================================================================= -->
+<section class="w-full bg-surface-container-low py-space-xl relative">
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+<div class="max-w-3xl mb-space-xl">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">// Quantitative Engineering Audit</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight mt-1">
+          DORA &amp; Operational Metrics: Pre vs. Post Engagement
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
+          Aggregated performance data across 45 enterprise migration projects over 36 months. Verified independently by client DevOps and finance offices.
+        </p>
+</div>
+<!-- Comparative Table Container -->
+<div class="w-full overflow-x-auto bg-surface-container rounded-xl shadow-md">
+<table class="w-full text-left border-collapse min-w-[700px]">
+<thead>
+<tr class="bg-surface-container-high text-on-surface">
+<th class="py-space-md px-space-lg font-label-md text-label-md uppercase tracking-wider">Mission Metric</th>
+<th class="py-space-md px-space-lg font-label-md text-label-md uppercase tracking-wider text-error">Pre-StratoOps Baseline</th>
+<th class="py-space-md px-space-lg font-label-md text-label-md uppercase tracking-wider text-tertiary-fixed">Post-StratoOps Pipeline</th>
+<th class="py-space-md px-space-lg font-label-md text-label-md uppercase tracking-wider text-primary">Quantitative Delta</th>
+<th class="py-space-md px-space-lg font-label-md text-label-md uppercase tracking-wider">Enterprise Impact</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-body-sm text-body-sm">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="py-space-md px-space-lg font-semibold text-on-surface">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">rocket_launch</span>
+                  Deployment Frequency
+                </div>
+</td>
+<td class="py-space-md px-space-lg text-on-surface-variant font-code-block text-code-block">Once every 6 weeks</td>
+<td class="py-space-md px-space-lg text-tertiary-fixed font-code-block text-code-block font-semibold">14 times per day</td>
+<td class="py-space-md px-space-lg text-primary font-bold font-code-block text-code-block">+5,800% Velocity</td>
+<td class="py-space-md px-space-lg text-on-surface-variant">Feature releases ship on PR merge with automated canary gating.</td>
+</tr>
+<!-- Row 2 -->
+<tr class="bg-surface-container-low/40 hover:bg-surface-container-high/50 transition-colors">
+<td class="py-space-md px-space-lg font-semibold text-on-surface">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">timer</span>
+                  Lead Time for Changes
+                </div>
+</td>
+<td class="py-space-md px-space-lg text-on-surface-variant font-code-block text-code-block">21 calendar days</td>
+<td class="py-space-md px-space-lg text-tertiary-fixed font-code-block text-code-block font-semibold">32 minutes</td>
+<td class="py-space-md px-space-lg text-primary font-bold font-code-block text-code-block">99.8% Reduction</td>
+<td class="py-space-md px-space-lg text-on-surface-variant">Automated linting, image scanning, and synthetic staging validation.</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="py-space-md px-space-lg font-semibold text-on-surface">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">healing</span>
+                  Mean Time to Recovery (MTTR)
+                </div>
+</td>
+<td class="py-space-md px-space-lg text-on-surface-variant font-code-block text-code-block">4.5 hours</td>
+<td class="py-space-md px-space-lg text-tertiary-fixed font-code-block text-code-block font-semibold">3.2 minutes</td>
+<td class="py-space-md px-space-lg text-primary font-bold font-code-block text-code-block">98.8% Faster</td>
+<td class="py-space-md px-space-lg text-on-surface-variant">Instant automated rollbacks via GitOps sync and eBPF anomaly detection.</td>
+</tr>
+<!-- Row 4 -->
+<tr class="bg-surface-container-low/40 hover:bg-surface-container-high/50 transition-colors">
+<td class="py-space-md px-space-lg font-semibold text-on-surface">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">bug_report</span>
+                  Change Failure Rate
+                </div>
+</td>
+<td class="py-space-md px-space-lg text-on-surface-variant font-code-block text-code-block">18.4% (Frequent hotfixes)</td>
+<td class="py-space-md px-space-lg text-tertiary-fixed font-code-block text-code-block font-semibold">0.2% (Eliminated)</td>
+<td class="py-space-md px-space-lg text-primary font-bold font-code-block text-code-block">92x Stability</td>
+<td class="py-space-md px-space-lg text-on-surface-variant">Ephemeral sandbox tests prevent unstable containers reaching production.</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="py-space-md px-space-lg font-semibold text-on-surface">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">payments</span>
+                  Compute Cost per Transaction
+                </div>
+</td>
+<td class="py-space-md px-space-lg text-on-surface-variant font-code-block text-code-block">$0.042 per request</td>
+<td class="py-space-md px-space-lg text-tertiary-fixed font-code-block text-code-block font-semibold">$0.011 per request</td>
+<td class="py-space-md px-space-lg text-primary font-bold font-code-block text-code-block">-73.8% Efficiency</td>
+<td class="py-space-md px-space-lg text-on-surface-variant">Graviton adoption and Karpenter bin-packing eliminate idle CPU cycles.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- SECTION 5: VIDEO & TECHNICAL TESTIMONIALS FROM CTOS & VP ENGINEERING      -->
+<!-- ========================================================================= -->
+<section class="w-full bg-surface py-space-xl relative overflow-hidden">
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+<!-- Section Title & Navigation -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-xl">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">// Executive Validation</span>
+<h2 class="font-headline-lg text-headline-lg text-primary font-bold tracking-tight mt-1">
+            Perspectives from Technical Leadership
+          </h2>
+</div>
+<div class="flex items-center gap-space-xs">
+<button aria-label="Previous testimonial" class="w-10 h-10 rounded bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center justify-center transition-colors cursor-pointer" id="test-prev" type="button">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+</button>
+<button aria-label="Next testimonial" class="w-10 h-10 rounded bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center justify-center transition-colors cursor-pointer" id="test-next" type="button">
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Testimonial Grid / Cards Slider -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg" id="testimonial-container">
+<!-- Card 1 -->
+<div class="bg-surface-container-low p-space-xl rounded-xl shadow-md flex flex-col justify-between relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-2xl pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-label-sm text-label-sm uppercase font-semibold">Apex FinTech Corp</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary-fixed font-code-block">CORE MIGRATION // 2024</span>
+</div>
+<!-- Quote Text -->
+<p class="font-body-lg text-body-lg text-on-surface italic leading-relaxed mb-space-lg">
+              "StratoOps executed our multi-region core cutover with surgical precision. Our 14 million customers didn't experience a single dropped connection or failed transaction. Their automated rollback mesh gave our board total confidence."
+            </p>
+</div>
+<!-- Author Info & Whitepaper link -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md pt-space-md bg-surface-container-lowest/40 p-space-md rounded-lg">
+<div class="flex items-center gap-space-md">
+<img class="w-12 h-12 rounded-full object-cover shadow-sm" data-alt="Professional corporate headshot of Marcus Sterling, Chief Technology Officer at Apex FinTech. He has short silver hair, glasses, wearing a sharp navy blazer, photographed with studio lighting against a dark corporate gradient backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTzJs7EdOtZ3UthcxPl22IAprpoxI9aEDa_bTPmPen-F7NpUYYBcBlMnpYindptWfdjf-LokAiX9y8LqQPKnBzuZDv1Nobc5WD7bTBsJVU86s_ZaBrNSlxXVRbDeAHJQQLpMd6vGKnoZreS8641ZUilDsN92M06FsUoyDuH7uFKymukvRADmMJlnXg9EIoZRwt8cFbuUnS5arK9SM1xYuw7gUQL0GiXDFB-wwdGq0_ezcIiyVtzi56GQ"/>
+<div>
+<div class="font-body-md text-body-md font-bold text-on-surface">Marcus Sterling</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">CTO, Apex FinTech Solutions</div>
+</div>
+</div>
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary hover:text-primary uppercase transition-colors" href="#">
+<span class="">Read Joint Case Study</span>
+<span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+</a>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-low p-space-xl rounded-xl shadow-md flex flex-col justify-between relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-full blur-2xl pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-label-sm text-label-sm uppercase font-semibold">CloudScale SaaS International</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary-fixed font-code-block">GITOPS &amp; K8S // 2024</span>
+</div>
+<!-- Quote Text -->
+<p class="font-body-lg text-body-lg text-on-surface italic leading-relaxed mb-space-lg">
+              "Their Terraform module blueprints and ArgoCD GitOps architecture have become the benchmark across all our 60+ distributed engineering squads. We went from fighting broken Helm charts to continuous, hands-off zero-downtime releases."
+            </p>
+</div>
+<!-- Author Info & Whitepaper link -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md pt-space-md bg-surface-container-lowest/40 p-space-md rounded-lg">
+<div class="flex items-center gap-space-md">
+<img class="w-12 h-12 rounded-full object-cover shadow-sm" data-alt="Professional high-resolution headshot of Elena Vance, VP of Infrastructure and Platform Engineering at CloudScale. Natural smile, dark hair pulled back, charcoal grey crew neck, sleek office architecture visible softly blurred in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9WdNxhdMyPqOzeotnXGFfCKjYChW9rPHXZTk9rPmLRbAGOlJacSfY2RkT29LfBV7WpOceTl4a9IkAlViJ51sozfMHQdUuhiVIlAEjPDQWwa31qfLbONB3xAQbxJblkzQ6QntBGUptTW7y9DYLocK8478viJgY87oK6eGGdEkRZZCn88dqVcWMKjzSr1fpx1KFsVnQJmj5J0PxdlKVvYEogD0hATmbLIO6hH-96F2ib_F0jsDgs23GKg"/>
+<div>
+<div class="font-body-md text-body-md font-bold text-on-surface">Elena Vance</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">VP Infrastructure, CloudScale SaaS</div>
+</div>
+</div>
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary hover:text-primary uppercase transition-colors" href="#">
+<span class="">Read Joint Whitepaper</span>
+<span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- SECTION 6: WHITE PAPERS & ENGINEERING DEEP DIVES + NDA CTA                -->
+<!-- ========================================================================= -->
+<section class="w-full bg-surface-container-lowest py-space-xl relative">
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-xl">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">// Knowledge Base</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight mt-1">
+            Engineering Whitepapers &amp; Frameworks
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mt-1">
+            Peer-reviewed architectural blueprints written by StratoOps Principal Systems Engineers. Free gated downloads.
+          </p>
+</div>
+</div>
+<!-- 3 Whitepaper Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg mb-space-xl">
+<!-- Whitepaper 1 -->
+<div class="bg-surface-container p-space-lg rounded-xl shadow-md flex flex-col justify-between group hover:bg-surface-container-high transition-colors">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm uppercase">48 Pages // PDF</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">menu_book</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-xs group-hover:text-primary transition-colors">
+              The Enterprise Guide to Zero-Downtime Database Migration
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">
+              Detailed breakdown of dual-write synchronization, CDC pipelines with Debezium, multi-master conflict resolution, and rollback telemetry.
+            </p>
+</div>
+<button class="w-full flex items-center justify-center gap-space-xs py-space-sm bg-surface-container-high group-hover:bg-primary-container text-on-surface group-hover:text-on-primary-container rounded font-label-md text-label-md uppercase font-semibold transition-all cursor-pointer" onclick="triggerDownloadModal('The Enterprise Guide to Zero-Downtime Database Migration')" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span class="">Download Spec Paper</span>
+</button>
+</div>
+<!-- Whitepaper 2 -->
+<div class="bg-surface-container p-space-lg rounded-xl shadow-md flex flex-col justify-between group hover:bg-surface-container-high transition-colors">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-highest text-secondary font-label-sm text-label-sm uppercase">36 Pages // PDF</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">layers</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-xs group-hover:text-primary transition-colors">
+              GitOps at Scale: Managing 10,000+ Kubernetes Nodes with ArgoCD
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">
+              ApplicationSet topologies, repo-per-team vs monorepo structures, policy enforcement via Kyverno, and disaster recovery replication.
+            </p>
+</div>
+<button class="w-full flex items-center justify-center gap-space-xs py-space-sm bg-surface-container-high group-hover:bg-primary-container text-on-surface group-hover:text-on-primary-container rounded font-label-md text-label-md uppercase font-semibold transition-all cursor-pointer" onclick="triggerDownloadModal('GitOps at Scale: Managing 10,000+ Kubernetes Nodes with ArgoCD')" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span class="">Download Spec Paper</span>
+</button>
+</div>
+<!-- Whitepaper 3 -->
+<div class="bg-surface-container p-space-lg rounded-xl shadow-md flex flex-col justify-between group hover:bg-surface-container-high transition-colors">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-highest text-tertiary-fixed font-label-sm text-label-sm uppercase">52 Pages // PDF</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">savings</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-xs group-hover:text-primary transition-colors">
+              FinOps 2025: Algorithmic Cloud Cost Reduction
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">
+              Eliminating cloud waste without compromising performance SLAs. Karpenter consolidation algorithms, Spot-fleet safety, and egress bypass.
+            </p>
+</div>
+<button class="w-full flex items-center justify-center gap-space-xs py-space-sm bg-surface-container-high group-hover:bg-primary-container text-on-surface group-hover:text-on-primary-container rounded font-label-md text-label-md uppercase font-semibold transition-all cursor-pointer" onclick="triggerDownloadModal('FinOps 2025: Algorithmic Cloud Cost Reduction')" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span class="">Download Spec Paper</span>
+</button>
+</div>
+</div>
+<!-- High-Conversion NDA Consultation Banner -->
+<div class="bg-surface-container-low p-space-xl rounded-2xl shadow-xl flex flex-col lg:flex-row items-center justify-between gap-space-xl relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-r from-primary-container/10 via-transparent to-secondary-container/10 pointer-events-none"></div>
+<div class="relative z-10 max-w-2xl">
+<div class="flex items-center gap-space-xs text-primary mb-space-xs">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Bespoke Architectural Advisory</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">
+            Have a complex infrastructure challenge? Let's review your architecture under NDA.
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+            Direct 45-minute technical whiteboarding session with a Principal Cloud Architect. We evaluate your current topologies, quantify risk, and outline clear cutover boundaries before you commit.
+          </p>
+</div>
+<div class="relative z-10 flex flex-col sm:flex-row items-center gap-space-md shrink-0 w-full lg:w-auto">
+<a class="w-full sm:w-auto text-center px-space-xl py-space-md bg-primary-container text-on-primary-container font-label-lg text-label-lg uppercase font-semibold rounded shadow-md hover:bg-secondary-fixed transition-all" data-path="contact" href="#">
+            Schedule Architecture Review
+          </a>
+<a class="w-full sm:w-auto text-center px-space-lg py-space-md bg-surface-container text-on-surface font-label-lg text-label-lg uppercase rounded hover:bg-surface-container-high transition-colors" href="mailto:advisory@stratoops.internal">
+            advisory@stratoops.internal
+          </a>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- MODAL: ARCHITECTURE SCHEMATIC VIEWER (Vanilla JS Controlled)              -->
+<!-- ========================================================================= -->
+<div class="fixed inset-0 bg-surface-dim/80 backdrop-blur-md z-50 hidden items-center justify-center p-space-md" id="arch-modal-backdrop">
+<div class="bg-surface-container-high rounded-xl max-w-3xl w-full p-space-lg shadow-2xl relative">
+<div class="flex items-center justify-between pb-space-sm mb-space-md">
+<div>
+<span class="font-label-sm text-label-sm uppercase text-secondary font-bold" id="modal-eyebrow">Architecture Schematic Inspection</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold" id="modal-title">System Architecture Blueprint</h4>
+</div>
+<button class="w-8 h-8 rounded bg-surface-container hover:bg-surface text-on-surface flex items-center justify-center cursor-pointer" onclick="closeArchModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg mb-space-md font-code-block text-code-block text-on-surface-variant overflow-x-auto" id="modal-body-content">
+<p class="text-tertiary-fixed font-bold mb-2">// Terraform Infrastructure Definition &amp; Routing Topology</p>
+<pre class="text-primary text-xs leading-5"><code>module "eks_cluster" {
+  source          = "terraform-aws-modules/eks/aws"
+  version         = "20.8.4"
+  cluster_name    = "prod-core-banking-mesh"
+  cluster_version = "1.29"
+
+  vpc_id                   = module.vpc.vpc_id
+  subnet_ids               = module.vpc.private_subnets
+  enable_irsa              = true
+  manage_aws_auth_configmap = false
+
+  eks_managed_node_groups = {
+    graviton_compute = {
+      instance_types = ["c7g.2xlarge", "m7g.2xlarge"]
+      capacity_type  = "SPOT"
+      min_size       = 12
+      max_size       = 240
+      desired_size   = 32
+      labels = {
+        tier = "realtime-settlement"
+        compliance = "pci-dss-l1"
+      }
+    }
+  }
+}</code></pre>
+</div>
+<div class="flex justify-end gap-space-sm">
+<button class="px-space-md py-space-xs bg-surface-container text-on-surface font-label-md text-label-md uppercase rounded hover:bg-surface cursor-pointer" onclick="closeArchModal()" type="button">
+          Close Inspector
+        </button>
+<a class="px-space-md py-space-xs bg-primary-container text-on-primary-container font-label-md text-label-md uppercase rounded font-semibold hover:bg-secondary-fixed" data-path="contact" href="#">
+          Request Full Engineering Repo
+        </a>
+</div>
+</div>
+</div>
+<!-- ========================================================================= -->
+<!-- MODAL: GATED WHITEPAPER DOWNLOAD DIALOG (Vanilla JS Controlled)          -->
+<!-- ========================================================================= -->
+<div class="fixed inset-0 bg-surface-dim/80 backdrop-blur-md z-50 hidden items-center justify-center p-space-md" id="whitepaper-modal">
+<div class="bg-surface-container-high rounded-xl max-w-lg w-full p-space-lg shadow-2xl relative">
+<div class="flex items-center justify-between pb-space-sm mb-space-md">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[20px]">lock_open</span>
+<span class="font-label-sm text-label-sm uppercase font-semibold">Immediate PDF Retrieval</span>
+</div>
+<button class="w-8 h-8 rounded bg-surface-container hover:bg-surface text-on-surface flex items-center justify-center cursor-pointer" onclick="closeDownloadModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-space-xs" id="wp-modal-title">
+        The Enterprise Guide to Zero-Downtime Migration
+      </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+        Enter your enterprise engineering email to receive the full unredacted PDF and Terraform architecture specs.
+      </p>
+<form class="space-y-3" id="wp-form" onsubmit="handleDownloadSubmit(event)">
+<div>
+<label class="block font-label-sm text-label-sm uppercase text-on-surface-variant mb-1">Corporate Email</label>
+<input class="w-full h-11 px-3 bg-surface-container-lowest text-on-surface rounded text-body-sm focus:outline-none focus:ring-1 focus:ring-primary-container" placeholder="name@enterprise.com" required="" type="email"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm uppercase text-on-surface-variant mb-1">Current Primary Cloud</label>
+<select class="w-full h-11 px-3 bg-surface-container-lowest text-on-surface rounded text-body-sm focus:outline-none focus:ring-1 focus:ring-primary-container">
+<option>AWS Multi-Region</option>
+<option>Google Cloud / GKE</option>
+<option>Microsoft Azure</option>
+<option>Hybrid On-Prem + Cloud</option>
+</select>
+</div>
+<button class="w-full py-space-sm bg-primary-container text-on-primary-container font-label-lg text-label-lg uppercase font-semibold rounded shadow-md hover:bg-secondary-fixed transition-all cursor-pointer mt-space-md" type="submit">
+          Transmit PDF to Email
+        </button>
+</form>
+</div>
+</div>
+<!-- ========================================================================= -->
+<!-- INLINE INTERACTION LOGIC (Filtering, Testimonial Carousel, Modals)        -->
+<!-- ========================================================================= -->
+<script>
+    // Industry & Vector Filter Functionality
+    document.addEventListener('DOMContentLoaded', () => {
+      const industryButtons = document.querySelectorAll('.filter-industry-btn');
+      const vectorButtons = document.querySelectorAll('.filter-vector-btn');
+      const caseCards = document.querySelectorAll('.case-card');
+
+      let currentIndustry = 'all';
+      let currentVector = null;
+
+      function applyFilter() {
+        caseCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          const vectors = card.getAttribute('data-vector') || '';
+
+          const matchesIndustry = (currentIndustry === 'all' || category === currentIndustry);
+          const matchesVector = (!currentVector || vectors.includes(currentVector));
+
+          if (matchesIndustry && matchesVector) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      }
+
+      industryButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          industryButtons.forEach(b => {
+            b.classList.remove('bg-primary-container', 'text-on-primary-container');
+            b.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+          });
+          btn.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+          btn.classList.add('bg-primary-container', 'text-on-primary-container');
+
+          currentIndustry = btn.getAttribute('data-filter');
+          applyFilter();
+        });
+      });
+
+      vectorButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const selectedVector = btn.getAttribute('data-vector');
+          if (currentVector === selectedVector) {
+            currentVector = null;
+            btn.classList.remove('bg-secondary-container', 'text-on-secondary-container');
+            btn.classList.add('bg-surface-container-low', 'text-secondary');
+          } else {
+            vectorButtons.forEach(b => {
+              b.classList.remove('bg-secondary-container', 'text-on-secondary-container');
+              b.classList.add('bg-surface-container-low', 'text-secondary');
+            });
+            btn.classList.remove('bg-surface-container-low', 'text-secondary');
+            btn.classList.add('bg-secondary-container', 'text-on-secondary-container');
+            currentVector = selectedVector;
+          }
+          applyFilter();
+        });
+      });
+    });
+
+    // Architecture Modal Inspector Functions
+    function openArchModal(caseId) {
+      const backdrop = document.getElementById('arch-modal-backdrop');
+      const title = document.getElementById('modal-title');
+      const body = document.getElementById('modal-body-content');
+
+      if (caseId === 'modal-case-1') {
+        title.innerText = 'HIPAA GitOps Multi-Cluster Topology (GKE Enterprise)';
+      } else if (caseId === 'modal-case-2') {
+        title.innerText = '40M Concurrent Peak Spike Absorber (AWS EKS & KEDA)';
+      } else if (caseId === 'modal-case-3') {
+        title.innerText = 'Multi-Cloud Automated Disaster Recovery Mesh (AWS / Azure)';
+      } else if (caseId === 'modal-case-4') {
+        title.innerText = 'FinOps Compute Bin-Packing Schema (Graviton3 & Karpenter)';
+      }
+
+      backdrop.classList.remove('hidden');
+      backdrop.classList.add('flex');
+    }
+
+    function closeArchModal() {
+      const backdrop = document.getElementById('arch-modal-backdrop');
+      backdrop.classList.remove('flex');
+      backdrop.classList.add('hidden');
+    }
+
+    // Whitepaper Download Modal Functions
+    function triggerDownloadModal(title) {
+      const wpModal = document.getElementById('whitepaper-modal');
+      document.getElementById('wp-modal-title').innerText = title;
+      wpModal.classList.remove('hidden');
+      wpModal.classList.add('flex');
+    }
+
+    function closeDownloadModal() {
+      const wpModal = document.getElementById('whitepaper-modal');
+      wpModal.classList.remove('flex');
+      wpModal.classList.add('hidden');
+    }
+
+    function handleDownloadSubmit(e) {
+      e.preventDefault();
+      alert('Verification verified. Whitepaper PDF dispatched to your enterprise inbox.');
+      closeDownloadModal();
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest text-on-surface mt-auto"><div class="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin py-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl mb-space-xl"><div class="flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><img alt="StratoOps Cloud &amp; DevOps Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Vi7rqxSz8ptX-zcyMsz1MAinyhkdaVLrAcS-kr3oJUzJKxvDawb1PhDZ7pKG7mENuOuDZTQTHLazJSQktZHJdMi5-TSTW9p8gzDnv_iXnTlJK8zovsBBuL-kRFmuoc_9vvwTjBkVsyq2TSrK343xATPgQqZeJ6kcraxZ9euAjQHW2ruFFHJmz7vxz2dKWyBuYtB9_pcJuxNbMvgX7G2CpTsfnXEtsyBT0zxKUYHmYQYjSh6msVdb9h3IIY"/><span class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight uppercase">Strato<span class="text-secondary">Ops</span></span></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Architecting resilient, scalable multi-cloud infrastructure and high-velocity DevOps pipelines with zero-downtime guarantees.</p><div class="flex flex-wrap gap-space-xs mt-space-sm"><span class="px-space-sm py-space-xs rounded bg-surface-container text-secondary font-label-sm text-label-sm uppercase">AWS Premier</span><span class="px-space-sm py-space-xs rounded bg-surface-container text-tertiary-fixed font-label-sm text-label-sm uppercase">CNCF Silver</span><span class="px-space-sm py-space-xs rounded bg-surface-container text-primary font-label-sm text-label-sm uppercase">Azure Expert MSP</span></div></div><div class="flex flex-col gap-space-sm"><h4 class="font-label-lg text-label-lg text-primary uppercase font-semibold mb-space-xs">Solutions</h4><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><li class="hover:text-on-surface transition-colors"><a class="" data-path="services" href="#">Zero-Downtime Cloud Migration</a></li><li class="hover:text-on-surface transition-colors"><a class="" data-path="services" href="#">Cloud-Native Kubernetes &amp; Meshes</a></li><li class="hover:text-on-surface transition-colors"><a class="" data-path="services" href="#">Terraform &amp; GitOps Automation</a></li><li class="hover:text-on-surface transition-colors"><a class="" data-path="services" href="#">24/7 SRE &amp; Observability Mesh</a></li><li class="hover:text-on-surface transition-colors"><a class="" data-path="services" href="#">FinOps Cloud Cost Reduction</a></li></ul></div><div class="flex flex-col gap-space-sm"><h4 class="font-label-lg text-label-lg text-primary uppercase font-semibold mb-space-xs">Company &amp; Insights</h4><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><li class="hover:text-on-surface transition-colors"><a class="" data-path="technologies" href="#">Architecture Benchmarks</a></li><li class="hover:text-on-surface transition-colors"><a class="" data-path="case-studies" href="#">Engineering Case Studies</a></li><li class="hover:text-on-surface transition-colors"><a class="" data-path="technologies" href="#">Tech Stack Deep Dives</a></li><li class="hover:text-on-surface transition-colors"><a class="" data-path="contact" href="#">Enterprise Security &amp; Compliance</a></li><li class="hover:text-on-surface transition-colors"><a class="" data-path="contact" href="#">Careers &amp; SRE Fellowships</a></li></ul></div><div class="flex flex-col gap-space-sm"><h4 class="font-label-lg text-label-lg text-primary uppercase font-semibold mb-space-xs">Consulting Offices</h4><div class="font-body-sm text-body-sm text-on-surface-variant flex flex-col gap-space-xs"><p class=""><span class="text-on-surface font-semibold">San Francisco:</span> 555 Mission St, Suite 2400</p><p class=""><span class="text-on-surface font-semibold">London:</span> 100 Bishopsgate, Level 18</p><p class=""><span class="text-on-surface font-semibold">Singapore:</span> 1 Marina Boulevard</p><p class=""><span class="text-on-surface font-semibold">Frankfurt:</span> Mainzer Landstraße 50</p></div><div class="mt-space-sm flex flex-col gap-space-xs font-label-md text-label-md text-secondary"><a class="hover:text-primary transition-colors flex items-center gap-space-xs" href="mailto:advisory@stratoops.internal"><span class="material-symbols-outlined text-[16px]">mail</span>advisory@stratoops.internal</a><a class="hover:text-primary transition-colors flex items-center gap-space-xs" href="tel:+18005550199"><span class="material-symbols-outlined text-[16px]">call</span>+1 (800) 555-0199</a></div></div></div><div class="pt-space-lg bg-surface-container-low/40 rounded px-space-md py-space-sm flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-on-surface-variant"><div class="flex flex-wrap items-center gap-space-md"><span class="font-label-sm text-label-sm uppercase text-on-surface">© 2025 StratoOps Global Consulting Ltd. All rights reserved.</span><span class="px-space-xs py-space-xs rounded bg-surface-container font-label-sm text-label-sm text-tertiary-fixed">SOC2 Type II Certified</span><span class="px-space-xs py-space-xs rounded bg-surface-container font-label-sm text-label-sm text-secondary">ISO 27001 Ready</span></div><div class="flex items-center gap-space-md font-label-sm text-label-sm uppercase"><a class="hover:text-on-surface transition-colors" data-path="contact" href="#">Privacy Policy</a><a class="hover:text-on-surface transition-colors" data-path="contact" href="#">Terms of Service</a><a class="hover:text-on-surface transition-colors" data-path="contact" href="#">Status Telemetry</a></div></div></div></footer>
+</body></html>
